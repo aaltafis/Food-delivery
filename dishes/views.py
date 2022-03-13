@@ -6,7 +6,14 @@ def index(request):
 	"""
 	Главная страница
 	""" 
-	return render(request, "dishes/index.html")
+
+	categories = Category.objects.all()
+
+	context = {
+		'categories': categories
+	}
+
+	return render(request, "dishes/index.html", context)
 
 
 def categories_page_view(request):
