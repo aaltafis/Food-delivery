@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+
+	<h1>{{ category.name }}</h1>
+
+	{% for product in products %}
+
+		<a href="{% url 'product_detail' category.slug product.slug %}">{{ product.title }}</a>
+		
+	{% endfor %}
+
+{% endblock content %}

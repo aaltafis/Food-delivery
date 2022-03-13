@@ -1,5 +1,6 @@
 asgiref==3.5.0
 Django==4.0.3
 Pillow==9.0.1
+slugify==0.0.1
 sqlparse==0.4.2
 tzdata==2021.5
