@@ -1,0 +1,477 @@
+{% extends "posts/base.html" %}
+{% load static %}
+{% block content %}
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+<div class="container">
+	<center>
+		<img src="https://cdn.shopify.com/s/files/1/0250/0401/5704/files/fooddelivery_04_x1024.jpg?v=1570144141" alt="">
+		<p class="title">BURGERS</p>
+		<p class="title-city">IN NEW YORK CITY</p>
+	</center>
+	<table>
+		<tr class="h1-title">
+			<td><h1>CALL US</h1></td>
+			<td><h1>HOURS</h1></td>
+			<td><h1>LOCATION</h1></td>
+		</tr>
+		<tr>
+			<td><h1>(267) 730-8765</h1></td>
+			<td><h1>T-F: 7AM – 5PM</h1></td>
+			<td><h1>242 S 11TH ST.</h1></td>
+		</tr>
+		<tr>
+			<td><h1>(267) 730-8754</h1></td>
+			<td><h1>S-SU: 8AM – 5PM</h1></td>
+			<td><h1>PHILLY, NYC 19107</h1></td>
+		</tr>
+	</table>
+</div>
+<center style = "margin-top: 16%;"><a class="big-link" href="#">BURGERS</a></center>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="{% static 'image/BURGER_INDIANA_small.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
+        <h6>$144.90</h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/BURGER_NEW_YORK_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/BURGER_THE_HIGH_SCHOOL_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/BURGER_THE_DADDY_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Oozio Style</a>
+        <h6 class="otstup">Lightweight water-resistant jacket</h6>
+        <h6>$69.75 <del>$90.65</del></h6>
+    </div>
+
+    <div class="item">
+        <img src="{% static 'image/BURGER_WILLIAMS_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Slim Fit Stretch Suit</415
+        <h6>$499.00</h6>
+    </div>
+    
+    <div class="item">
+        <img src="{% static 'image/BURGER_THE_UNCLE_SAM_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/BURGER_THE_MACHO_NACHO_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div> 
+    <div class="item">
+        <img src="{% static 'image/BURGER_ARKANSAS_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>     
+</div>
+<body>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            autoplay: false,
+            dots:false,
+            responsive:{
+
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+    
+</body>
+	
+<center style = "margin-top: 2%;"><a class="big-link" href="#">SALADS</a></center>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="{% static 'image/SALAD_CAESAR_WITH_SHRIMPS_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
+        <h6>$144.90</h6>
+    </div>
+    
+    <div class="item">
+        <img src="{% static 'image/SALAD_NY_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/GREEK_SALAD_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Oozio Style</a>
+        <h6 class="otstup">Lightweight water-resistant jacket</h6>
+        <h6>$69.75 <del>$90.65</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/SALAD_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Slim Fit Stretch Suit</415
+        <h6>$499.00</h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/YELLOW_SALAD_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/SALAD_CAESAR_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>      
+</div>
+<body>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:false,
+            dots:false,
+            responsive:{
+
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+    
+</body>
+
+<center style = "margin-top: 2%;"><a class="big-link" href="#">SNACKS</a></center>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="{% static 'image/CHICKEN_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
+        <h6>$144.90</h6>
+    </div>
+    
+    <div class="item">
+        <img src="{% static 'image/CHICKEN_STICKS_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/POTATOES_f687.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Oozio Style</a>
+        <h6 class="otstup">Lightweight water-resistant jacket</h6>
+        <h6>$69.75 <del>$90.65</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/MIX_SNACKS_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Slim Fit Stretch Suit</415
+        <h6>$499.00</h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/POTATOES_WITH_DRIED_ONIONS_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/CHICKEN_WINGS_BBQ_600x' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>      
+</div>
+<body>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:false,
+            dots:false,
+            responsive:{
+
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+    
+</body>
+
+<center style = "margin-top: 2%;"><a class="big-link" href="#">POTATOES</a></center>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="{% static 'image/FRENCH_FRIES_1_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
+        <h6>$144.90</h6>
+    </div>
+    
+    <div class="item">
+        <img src="{% static 'image/HOME_STYLE_POTATOES_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/POTATOES_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Oozio Style</a>
+        <h6 class="otstup">Lightweight water-resistant jacket</h6>
+        <h6>$69.75 <del>$90.65</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/FRENCH_FRIES_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Slim Fit Stretch Suit</415
+        <h6>$499.00</h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/HOME_STYLE_POTATOES_1_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>     
+</div>
+<body>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:false,
+            dots:false,
+            responsive:{
+
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>  
+</body>
+
+<center style = "margin-top: 2%;"><a class="big-link" href="#">SOUPS</a></center>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="{% static 'image/SOUP_WITH_PARMESAN_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
+        <h6>$144.90</h6>
+    </div>
+    
+    <div class="item">
+        <img src="{% static 'image/AMERICAN_CHOWDER_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/MUSHROOM_SOUP_WITH_PARMESAN_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Oozio Style</a>
+        <h6 class="otstup">Lightweight water-resistant jacket</h6>
+        <h6>$69.75 <del>$90.65</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/MUSHROOM_SOUP_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Slim Fit Stretch Suit</415
+        <h6>$499.00</h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/CHICKEN_BROTH_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>     
+</div>
+<body>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:false,
+            dots:false,
+            responsive:{
+
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+</body>
+
+<center style = "margin-top: 2%;"><a class="big-link" href="#">SAUCES</a></center>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="{% static 'image/MAYONNAISE_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
+        <h6>$144.90</h6>
+    </div>
+    
+    <div class="item">
+        <img src="{% static 'image/CHILLI_SAUCE_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/BBQ_SAUCE_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Oozio Style</a>
+        <h6 class="otstup">Lightweight water-resistant jacket</h6>
+        <h6>$69.75 <del>$90.65</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/DOR_BLUE_SAUCE_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Slim Fit Stretch Suit</415
+        <h6>$499.00</h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/CHEESE_SAUCE_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>    
+</div>
+<body>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:false,
+            dots:false,
+            responsive:{
+
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+    
+</body>
+<center style = "margin-top: 2%;"><a class="big-link" href="#">BEVERAGES</a></center>
+<div class="owl-carousel owl-theme">
+    <div class="item">
+        <img src="{% static 'image/THE_LEMONADE_1_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
+        <h6>$144.90</h6>
+    </div>
+    
+    <div class="item">
+        <img src="{% static 'image/THE_LEMONADE_2_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Christian Louboutin</a>
+        <h6 class="otstup">Concrete Jungle Pack</h6>
+        <h6>$695.00 <del>$2,295.00</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/THE_LEMONADE_3_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Oozio Style</a>
+        <h6 class="otstup">Lightweight water-resistant jacket</h6>
+        <h6>$69.75 <del>$90.65</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/THE_LEMONADE_5_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Cartier</a>
+        <h6 class="otstup">Slim Fit Stretch Suit</415
+        <h6>$499.00</h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/THE_LEMONADE_4_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>
+    <div class="item">
+        <img src="{% static 'image/THE_LEMONADE_6_600x.jpg' %}" class="otstup" alt="">
+        <a href="" class="link">Zoodel</a>
+        <h6 class="otstup">Future co-ord in lilac</h6>
+        <h6>$126.30 <del>$144.90</del></h6>
+    </div>      
+</div>
+<body>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            autoplay:false,
+            dots:false,
+            responsive:{
+
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>  
+</body>
+{% endblock content %}

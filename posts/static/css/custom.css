@@ -1,0 +1,61 @@
+body.color{
+    background-color: #0d0d0d;
+}
+
+div.container-fluid{
+	margin-top: 2%;
+}
+
+a.link {
+    color: orange;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Fredoka', sans-serif;
+
+   }
+a.link:hover {
+    color: white;  
+   }
+p.title{
+    position: relative;
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+    font-size: 180px;
+    margin-top: -28%;
+}
+p.title-city{
+    position: relative;
+    font-family: 'Fredoka', sans-serif;
+    margin-top: -6%;
+    font-size: 70px;
+    color: orange;
+}
+table{
+    text-align: center;
+    margin-top: 4%;
+    font-family: 'Fredoka', sans-serif;
+}
+
+tr.h1-title{
+    margin-top: 2%;
+    
+    color: white;   
+}
+tr{
+   color: orange;
+}
+
+a.big-link {
+    color: orange;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 60px;
+    font-family: 'Fredoka', sans-serif;
+
+   }
+a.big-link:hover {
+    color: white;  
+   }
+
+
