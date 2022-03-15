@@ -2,13 +2,17 @@
 
 
 {% block content %}
+	
 
-	<h1>{{ category.name }}</h1>
+	<div class="container">
+		<h1 class="category-title">{{ category.name }}</h1>
 
-	{% for product in products %}
+		{% for product in products %}
 
-		<a href="{% url 'product_detail' category.slug product.slug %}">{{ product.title }}</a>
-		
-	{% endfor %}
+			<a href="{% url 'product_detail' category.slug product.slug %}">{{ product.title }}</a>
+			
+		{% endfor %}
+	</div>
+	
 
 {% endblock content %}

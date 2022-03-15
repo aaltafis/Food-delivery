@@ -1,6 +1,8 @@
 asgiref==3.5.0
 Django==4.0.3
+django-bootstrap-breadcrumbs==0.9.2
 Pillow==9.0.1
+six==1.16.0
 slugify==0.0.1
 sqlparse==0.4.2
 tzdata==2021.5
