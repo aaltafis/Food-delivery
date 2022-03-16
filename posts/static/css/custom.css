@@ -5,6 +5,12 @@ body.color{
 div.container-fluid{
 	margin-top: 2%;
 }
+nav.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #0d0d0d;
+}
 
 a.link {
     color: orange;
@@ -39,7 +45,6 @@ table{
 
 tr.h1-title{
     margin-top: 2%;
-    
     color: white;   
 }
 tr{
@@ -57,5 +62,91 @@ a.big-link {
 a.big-link:hover {
     color: white;  
    }
+
+
+h1.name-text{
+    margin-top: 7%;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 70px;
+}
+h1.title-text{
+    position: relative;
+    margin-top: -20%;
+    font-family: 'Fredoka', sans-serif;
+    color: orange;
+    font-size: 40px;
+}
+h1.avtor{
+    position: relative;
+    margin-top: 2%;
+    color: white;
+}
+
+a.link-line{
+    color: orange;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 70px;
+}
+a.link-line:hover{
+    color: orange;
+    text-decoration: none;
+
+}
+
+
+/*---------------------*/
+
+.gallery {
+    width: 100%;
+    position: relative;
+
+}
+.gallery ul {
+ position: relative;
+}
+.gallery li {
+ width: 15%;
+ height: -7%;
+ float: left;
+}
+.gallery a {
+ display: block;
+ position: relative;
+ width: 100%;
+ height: 100%;
+}
+.gallery a:before {
+ position: absolute;
+ width: 32px;
+ height: 40px;
+ top: 40%;
+ left: 50%;
+ margin: -14px 0 0 -10px;
+ background: url(https://img.icons8.com/ios/344/instagram-new--v1.png) no-repeat;
+ content: '';
+ opacity: 0;
+ z-index: 1;
+ -webkit-transition: all 0.3s linear;
+ transition: all 0.3s linear;
+}
+.gallery a:hover:before {
+ top: 100%;
+ opacity: 1;
+}
+.gallery a:after {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ background: rgba(0, 0, 0, 0.5);
+ content: '';
+ opacity: 0;
+ -webkit-transition: all 0.3s linear;
+ transition: all 0.3s linear;
+}
+.gallery a:hover:after {
+ opacity: 1;
+}
 
 
