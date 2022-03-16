@@ -3,8 +3,15 @@
 
 {% block content %}
 	
-	{% for category in categories %}
-		<h1><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></h1>
-	{% endfor %}
+	<div class="gallery">
+		{% for category in categories %}
+			<div class="gallery__card">
+				<a href="{{ category.get_absolute_url }}">
+					<img class="gallery__card__picture" src="{{ category.image.url }}" alt="">
+					<h1>{{ category.name }}</h1>					
+				</a>
+			</div>
+		{% endfor %}
+	</div>
 
 {% endblock content %}
