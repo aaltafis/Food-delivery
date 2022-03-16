@@ -41,7 +41,7 @@ def category_product_page_view(request, slug):
 		'products':products,
 	}
 
-	return render(request, "dishes/category_page.html", context)
+	return render(request, "dishes/products.html", context)
 
 def product_detail_page_view(request, category_slug, product_slug):
 	""" 

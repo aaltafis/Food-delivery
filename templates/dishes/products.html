@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+	
+	<div class="gallery-grid">
+		{% for product in products %}
+			<div class="grid-item">
+				<div class="grid-item__inner">
+					<img src="{{ product.image.url }}" alt="">
+					<div class="grid-item__content">
+						<h2 style="color: #fabf00;">{{ product.title }}</h2>
+						<h2 style="color: #ffffff;">${{ product.price }}</h2>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+{% endblock content %}
