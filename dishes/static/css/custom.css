@@ -324,7 +324,7 @@ div.gallery__card:hover img.gallery__card__picture {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0;
-    transition: all .4s ease;
+    transition: all .9s ease;
     border: 10px solid #fabf00; 
 }
 
@@ -355,7 +355,7 @@ div.gallery__card:hover img.gallery__card__picture {
 
 .grid-item__content > h2 {
     display: block;
-    transform: translateY(230px);
+    transform: translateY(300px);
     transition: transform 0.4s ease;
 }
 
