@@ -3,6 +3,40 @@
 
 {% block content %}
 	
-	<h1 style="position: relative; top: 120px">{{ product.title }}</h1>
+	<section class="sproduct my-5 pt-5">
+		<div class="row mt-5 gap-5 gx-5">
+			<div class="product-image col-lg-5 col-md-12 col-12">
+				<img src="{{ product.image.url }}" style="height: 600px;" alt="">
+			</div>
+			<div class="product-info col-lg-6 col-md-12 col-12 ms-5">
+				<h1 class="product-title">{{ category.name }} "{{ product.title }}"</h1>
+				<h2 class="product-price">${{ product.price }}</h2>
+				<button id="decrement" onclick="stepper(this)">-</button>
+				<input type="number" id="my-input" readonly value="1" min="0" max="100" step="1">
+				<button id="increment" onclick="stepper(this)">+</button>
+				<button class="buy-btn">Add to cart</button>
+				<div class="text mt-5">
+					<p>Vendor: Food Delivery</p>
+					<p class="mt-5">We are proud to present our best premium Shopify theme - Wokiee.</p>
+					<p>This is multi-purpose software that can be used for any type of the store. <br> Great variety of available options will make customization process very <br> easy.</p>
+					<p>Please, take a look at feature list and compare with our competitors.</p>
+					<p>You can buy our theme and start your business online with minimal time <br> investments.</p>
+					<p>
+					   Wokiee support DropShipping app Oberlo. <br>
+					   Wokiee Shopify theme is powerfool tool to create personal webshop.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>					
 
 {% endblock content %}
+
+
+
+
+
+
+
+Wokiee support DropShipping app Oberlo.
+Wokiee Shopify theme is powerfool tool to create personal webshop.
