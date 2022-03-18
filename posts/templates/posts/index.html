@@ -1,4 +1,4 @@
-{% extends "posts/base.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% block content %}
 <body>
@@ -11,28 +11,30 @@
 		<p class="title">BURGERS</p>
 		<p class="title-city">IN NEW YORK CITY</p>
 	</center>
-	<table>
-		<tr class="h1-title">
-			<td><h1>CALL US</h1></td>
-			<td><h1>HOURS</h1></td>
-			<td><h1>LOCATION</h1></td>
-		</tr>
-		<tr>
-			<td><h1>(267) 730-8765</h1></td>
-			<td><h1>T-F: 7AM – 5PM</h1></td>
-			<td><h1>242 S 11TH ST.</h1></td>
-		</tr>
-		<tr>
-			<td><h1>(267) 730-8754</h1></td>
-			<td><h1>S-SU: 8AM – 5PM</h1></td>
-			<td><h1>PHILLY, NYC 19107</h1></td>
-		</tr>
-	</table>
+	<center>	
+		<table>
+			<tr class="h1-title">
+				<td><h1 style="margin-right: 140px;">CALL US</h1></td>
+				<td><h1 style="margin-right: 150px">HOURS</h1></td>
+				<td><h1>LOCATION</h1></td>
+			</tr>
+			<tr>
+				<td><h1 style="margin-right: 150px">(267) 730-8765</h1></td>
+				<td><h1 style="margin-right: 150px">T-F: 7AM – 5PM</h1></td>
+				<td><h1>242 S 11TH ST.</h1></td>
+			</tr>
+			<tr>
+				<td><h1 style="margin-right: 150px">(267) 730-8754</h1></td>
+				<td><h1 style="margin-right: 150px">S-SU: 8AM – 5PM</h1></td>
+				<td><h1>PHILLY, NYC 19107</h1></td>
+			</tr>
+		</table>
+	</center>
 </div>
-<center style = "margin-top: 16%;"><a class="big-link" href="#">BURGERS</a></center>
+<center style = "margin-top: 10%;"><a class="big-link" href="#">BURGERS</a></center>
 <div class="owl-carousel owl-theme">
     <div>
-        <img src="{% static 'image/BURGER_INDIANA_small.jpg' %}" alt="">
+        <img src="{% static 'image/BURGER_INDIANA_1024x.jpg' %}" alt="">
         <a href="" class="link">Cartier</a>
         <h6 class="otstup">Ecosmart hooded sweatshirt</h6>
         <h6>$144.90</h6>
@@ -87,7 +89,7 @@
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin:10,
-            nav:false,
+            nav:true,
             autoplay: false,
             dots:false,
             responsive:{
@@ -476,9 +478,19 @@
 </body>
 
 <img src="{% static 'image/fooddelivery_02_2048x.jpg' %}" alt="" width="2110">
-<img src="{% static 'image/fooddelivery_03_2048x.jpg' %}" alt="" width="2110">
+<div class="container">
+	<h1 class="tt-blid">THE BEST BURGER <br> DELIVERY!</h1>
+	<h4 class="blid">A great about us block helps builds trust between you and your <br> customers. The more content you provide about you and your business, <br> the more confident people will be when purchasing from your store.</h4>	
+</div>
 
-<center><h1 class="name-text">WHAT THEY’RE <br>SAYING</h1></center>
+<div style="margin-top: 8.6%">
+	<img src="{% static 'image/fooddelivery_03_2048x.jpg' %}" alt="" width="2110">	
+	<h1 class="tt-title">DELIVERY <br>AREA</h1>
+</div>
+
+
+
+<center style="margin-top: 20%;"><h1 class="name-text">WHAT THEY’RE <br>SAYING</h1></center>
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   	<div class="carousel-inner">
@@ -517,74 +529,45 @@
 <center>
 	<h1 class="name-text"><a href="" class="link-line">@ FOLLOW </a> US ON <br>INSTAGRAM</h1>
 </center>
-
-<ul class="gallery">
-	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-1_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-2_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-3_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-4_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-5_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-6_640x640.png' %}" alt="" > 	
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-7_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-8_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-9_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-10_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 	<li class="portfolio isotope-item">
- 		<a class="image" href="#">
- 			<img src="{% static 'image/bu_Rectangle-11_640x640.png' %}" alt="" >
- 		</a>
- 	</li>
- 
 <div>
-	
-	
-	
-	
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle_640x640.png' %}" width="348" alt="" >
+	</a>	
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-1_640x640.png' %}" width="348" alt="" >
+	</a>	
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-2_640x640.png' %}" width="348" alt="" >
+	</a>	
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-3_640x640.png' %}" width="348" alt="" >
+	</a>	
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-4_640x640.png' %}" width="348" alt="" >
+	</a>
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-5_640x640.png' %}" width="348" alt="" >
+	</a>
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-6_640x640.png' %}" width="348" alt="" > 	
+	</a>
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-7_640x640.png' %}" width="348" alt="" >
+	</a>
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-8_640x640.png' %}" width="348" alt="" >
+	</a> 	
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-9_640x640.png' %}" width="348" alt="" >
+	</a> 	
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-10_640x640.png' %}" width="348" alt="" >
+	</a>
+	<a class="image" href="#">
+		<img src="{% static 'image/bu_Rectangle-11_640x640.png' %}" width="348" alt="" >
+	</a>
+</div>
+
 
 
 
