@@ -375,7 +375,8 @@ section.sproduct div.row div.product-info {
     margin-left: 55px;
 }
 
-section.sproduct div.row div.product-info h1.product-title {
+section.sproduct div.row div.product-info h1.product-title,
+div.related-comics h1 {
     color: #fff;
     font-size: 60px;
 }
@@ -438,6 +439,58 @@ section.sproduct div.row div.product-info button#decrement {
 
 section.sproduct div.row div.product-info button#increment {
     right: 30px;
+}
+
+div.owl-carousel {
+    width: 90%;
+    margin: 0 auto;
+}
+
+div.owl-carousel div.item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all .9s ease;
+    border: 10px solid #fabf00; 
+}
+
+div.owl-carousel div.item:hover:before {
+    content: '';
+    opacity: 1;
+}   
+
+div.owl-carousel div.item div.carousel-item-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.owl-carousel div.item div.carousel-item-content > h3 {
+    font-size: 40px;
+}
+
+div.owl-carousel div.item div.carousel-item-content h3.product-title {
+    color: #fabf00;
+}
+
+div.owl-carousel div.item div.carousel-item-content h3.product-price {
+    color: #ffffff;
+}
+
+div.owl-carousel div.item div.carousel-item-content > h3 {
+    display: block;
+    transform: translateY(300px);
+    transition: transform 0.4s ease;
+}
+
+div.owl-carousel div.item:hover div.carousel-item-content > h3 {
+    transform: translate(0);
 }
 
 @media (max-width: 1200px) {
@@ -515,3 +568,4 @@ section.sproduct div.row div.product-info button#increment {
         width: 150px;
     }
 }
+

@@ -1,5 +1,5 @@
 {% extends '_base.html' %}
-
+{% load static %}
 
 {% block content %}
 	
@@ -28,15 +28,51 @@
 				</div>
 			</div>
 		</div>
-	</section>					
+	</section>
+
+	<h1 style="color: #ffffff; margin-left: 70px; font-size: 50px;">Related comics</h1>
+	<div class="owl-carousel owl-theme">
+	    {% for similar_product in similar_products %}
+	    	<div class="item">
+	    		<img src="{{ similar_product.image.url }}" alt="">
+	    		<div class="carousel-item-content">
+	    			<h3 class="product-title">{{ similar_product.title }}</h3>
+	    			<h3 class="product-price">${{ similar_product.price }}</h3>
+	    		</div>	    		
+	    	</div>
+	    {% endfor %}
+	</div>
+
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/owlcarousel/owl.carousel.min.js' %}"></script>
+
+	<script>
+		$('.owl-carousel').owlCarousel({
+		    loop:true,
+		    margin:10,
+		    responsiveClass:true,
+		    responsive:{
+		        0:{
+		            items:1,
+		            nav:true
+		        },
+		        600:{
+		            items:2,
+		            nav:false
+		        },
+		        1000:{
+		            items:3,
+		            nav:false
+		        },
+		        1040:{
+		            items:4,
+		            nav:true,
+		            loop:false
+		        }
+		    }
+		})
+	</script>
+
 
 {% endblock content %}
-
-
-
-
-
-
-
-Wokiee support DropShipping app Oberlo.
-Wokiee Shopify theme is powerfool tool to create personal webshop.
