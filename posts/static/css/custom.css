@@ -83,6 +83,78 @@ h1.title-text{
     color: #fabf00;
     font-size: 40px;
 }
+
+/*-------------------*/
+/*Это эффект при наведении*/
+
+div.gallery-grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+div.grid-inner{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+div.grid-inner:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: all .4s ease;
+    content: '';
+}
+
+div.grid-inner:hover:before{
+    opacity: 1;
+}
+div.grid-img{
+    object-fit: cover;
+}
+
+div.grid-title{
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 24px;
+    overflow: hidden;
+}
+.grid-title > span{
+    display: block;
+    transform: translateY(135px);
+    transition: transform .4s ease;
+}
+
+.grid-inner:hover .grid-title > span{
+    transform: translateY(0);
+}
+a.name{
+    text-decoration: none;
+    color: #fabf00;
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 28px;
+}
+a.name:hover{
+    color: white;
+}
+button.btn-name{
+    background: #fabf00;
+
+}
+button.btn-name:hover{
+    background: white;
+}
+
+/*-----------------------*/
+
+
 h1.avtor{
     position: relative;
     margin-top: 2%;
