@@ -13,7 +13,7 @@ body {
 
 header {
 	display: flex;
-	height: auto;
+	height: 100px;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -362,3 +362,210 @@ div.gallery__card:hover img.gallery__card__picture {
 .grid-item__inner:hover .grid-item__content > h2 {
     transform: translate(0);
 }
+
+
+/* PRODUCT DETAIL */
+
+section.sproduct {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section.sproduct div.row div.product-info {
+    margin-left: 55px;
+}
+
+section.sproduct div.row div.product-info h1.product-title,
+div.related-comics h1 {
+    color: #fff;
+    font-size: 60px;
+}
+
+section.sproduct div.row div.product-info h2.product-price {
+    color: #fff; 
+}
+
+section.sproduct div.row div.product-info input {
+    width: 140px;
+    height: 50px;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+
+section.sproduct div.row div.product-info input::-webkit-outer-spin-button,
+section.sproduct div.row div.product-info input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+section.sproduct div.row div.product-info #increment {
+    margin: 0 20px 0 0;
+}
+
+section.sproduct div.row div.product-info input:focus {
+    outline: none;
+}
+
+section.sproduct div.row div.product-info button.buy-btn {
+    width: 380px;
+    height: 50px;
+    border: 0;
+    background: #fabf00;
+}
+
+section.sproduct div.row div.product-info div.text {
+    color: #fff;
+    font-size: 18px;
+}
+
+section.sproduct div.row div.product-info div.text p {
+    font-family: sans-serif;
+}
+
+section.sproduct div.row div.product-info button#decrement,
+section.sproduct div.row div.product-info button#increment {
+    background: none;
+    border: none;
+    font-weight: 100;
+    color: gray;
+    font-family: sans-serif;
+    position: relative;
+    font-size: 17px;
+}
+
+section.sproduct div.row div.product-info button#decrement {
+    left: 30px;
+}
+
+section.sproduct div.row div.product-info button#increment {
+    right: 30px;
+}
+
+div.owl-carousel {
+    width: 90%;
+    margin: 0 auto;
+}
+
+div.owl-carousel div.item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all .9s ease;
+    border: 10px solid #fabf00; 
+}
+
+div.owl-carousel div.item:hover:before {
+    content: '';
+    opacity: 1;
+}   
+
+div.owl-carousel div.item div.carousel-item-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.owl-carousel div.item div.carousel-item-content > h3 {
+    font-size: 40px;
+}
+
+div.owl-carousel div.item div.carousel-item-content h3.product-title {
+    color: #fabf00;
+}
+
+div.owl-carousel div.item div.carousel-item-content h3.product-price {
+    color: #ffffff;
+}
+
+div.owl-carousel div.item div.carousel-item-content > h3 {
+    display: block;
+    transform: translateY(300px);
+    transition: transform 0.4s ease;
+}
+
+div.owl-carousel div.item:hover div.carousel-item-content > h3 {
+    transform: translate(0);
+}
+
+@media (max-width: 1200px) {
+    section.sproduct div.row div.product-image img {
+        height: 500px !important
+    }
+
+    section.sproduct div.row div.product-info {
+        margin-left: 35px !important;
+    }
+
+    section.sproduct div.row div.product-info div.text {
+        font-size: 15px;
+    }
+
+    section.sproduct div.row div.product-info input {
+        width: 100px;
+    }
+
+    section.sproduct div.row div.product-info button.buy-btn {
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    section.sproduct div.row div.product-image img {
+        height: 400px !important;
+    }
+
+    section.sproduct div.row div.product-info {
+        margin-left: 0px !important;
+    }
+
+    section.sproduct div.row div.product-info input {
+        width: 80px;
+    }
+
+    section.sproduct div.row div.product-info button.buy-btn {
+        width: 250px;
+    }
+}
+
+@media (max-width: 1000px) {
+    section.sproduct div.row div.product-image img {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        height: 600px !important;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    section.sproduct div.row div.product-info {
+
+    }
+}
+
+@media (max-width: 620px) {
+   section.sproduct div.row div.product-image img {
+       height: 400px !important;
+   } 
+}
+
+@media (max-width: 350px) {
+    section.sproduct div.row div.product-image img {
+        height: 300px !important;
+    }
+
+    section.sproduct div.row div.product-info input {
+        width: 80px;
+    }
+
+    section.sproduct div.row div.product-info button.buy-btn {
+        width: 150px;
+    }
+}
+
