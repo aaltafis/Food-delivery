@@ -29,18 +29,19 @@ a.link {
 a.link:hover {
     color: white;  
    }
+
 p.title{
     position: relative;
     font-family: 'Luckiest Guy', sans-serif;
     color: white;
-    font-size: 180px;
-    margin-top: -28%;
+    font-size: 220px;
+    margin-top: -30%;
 }
 p.title-city{
     position: relative;
     font-family: 'Luckiest Guy', sans-serif;
     margin-top: -6%;
-    font-size: 70px;
+    font-size: 90px;
     color: #fabf00;
 }
 table{
@@ -154,6 +155,64 @@ button.btn-name:hover{
 
 /*-----------------------*/
 
+/*920 строка*/
+/*Инстаграм сылка*/
+
+div.gallery-inst{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+}
+div.inst-item{
+    /*width: 33.33%;*/
+}
+
+div.inst-inner{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+div.inst-inner:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: all .4s ease;
+    content: '';
+}
+
+div.inst-inner:hover:before{
+    opacity: 1;
+}
+div.inst-img{
+    object-fit: cover;
+    width: 348px;
+}
+div.inst-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 24px;
+    overflow: hidden;
+}
+.inst-title > span{
+    display: block;
+    transform: translateY(30px);
+    transition: transform .4s ease;
+}
+
+.inst-inner:hover .inst-title > span{
+    transform: translateY(0);
+}
+
+/*------------------*/
+
 
 h1.avtor{
     position: relative;
@@ -206,7 +265,7 @@ button.btn:hover{
 
 
 
-p.tt-box, p.tt-box:hover{
+.tt-box, .tt-box:hover{
     color: white;
     text-decoration: none;
 }
