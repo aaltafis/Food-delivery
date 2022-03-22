@@ -30,6 +30,7 @@ a.link:hover {
     color: white;  
    }
 
+
 p.title{
     position: relative;
     font-family: 'Luckiest Guy', sans-serif;
@@ -44,13 +45,21 @@ p.title-city{
     font-size: 90px;
     color: #fabf00;
 }
+h1.indent{
+    margin-right: 150px;
+}
+h1.indent-2{
+    margin-right: 140px;
+}
+
+
 table{
     text-align: center;
     margin-top: 4%;
     font-family: 'Luckiest Guy', sans-serif;
 }
 
-tr.h1-title{
+.h1-title{
     margin-top: 2%;
     color: white;   
 }
@@ -123,6 +132,7 @@ div.grid-title{
     position: absolute;
     top: 50%;
     left: 28%;
+    white-space: nowrap;
     font-family: 'Luckiest Guy', sans-serif;
     font-size: 24px;
     overflow: hidden;
@@ -165,10 +175,6 @@ div.gallery-inst{
     height: 100%;
 
 }
-div.inst-item{
-    /*width: 33.33%;*/
-}
-
 div.inst-inner{
     position: relative;
     display: flex;
@@ -237,8 +243,14 @@ h1.tt-blid{
     font-family: 'Luckiest Guy', sans-serif;
     font-size: 100px;
 }
-h4.blid{
+.blid{
     color: white;
+}
+img.tt-img{
+    width: 2110px;
+}
+img.tt-img-2{
+    width: 2110px;
 }
 h1.tt-title{
     position: relative;
@@ -264,11 +276,110 @@ button.btn:hover{
 }
 
 
-
 .tt-box, .tt-box:hover{
     color: white;
     text-decoration: none;
 }
+
+
+@media (max-width: 1400px){
+    .h1-title{
+        margin-top: 10%;
+    }
+    p.title{
+    font-size: 180px;
+    margin-top: -35%;
+    }
+    p.title-city{
+        font-size: 60px;
+        color: #fabf00;
+    }
+    h1.indent{
+        margin-right: 100px;
+        font-size: 40px;
+    }
+    h1.indent-2{
+        margin-right: 100px;
+        font-size: 40px;
+    }
+    h1.indent-3{
+        font-size: 40px;
+    }
+    div.grid-title{
+        top: 50%;
+        left: 24%;
+        font-size: 22px;
+    }
+    img.tt-img{
+        width: 1232px;
+    }
+    img.tt-img-2{
+        margin-top: 0.8%;
+        width: 1232px;
+    }
+    h1.tt-title{
+        margin-top: -30%;
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 1200px){
+    img.image{
+        width: 950px;
+    }
+    p.title{
+    font-size: 170px;
+    margin-top: -35%;
+    }
+    p.title-city{
+        font-size: 50px;
+        color: #fabf00;
+    }
+    
+    h1.indent{
+        margin-right: 100px;
+        font-size: 30px;
+    }
+    h1.indent-2{
+        margin-right: 100px;
+        font-size: 30px;
+    }
+    h1.indent-3{
+        font-size: 30px;
+    }
+    div.grid-title{
+        font-size: 20px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 1000px){
+    img.tt-img-2{
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+    h1.tt-blid{
+        margin-top: -30%;
+        font-size: 40px;
+    }
+    .blid{
+        font-size: 20px;
+    }
+    h1.tt-title{
+        margin-left: 40%;
+        font-size: 30px;
+    }
+    .grid-title > span{
+    display: block;
+    transform: none;
+    transition: transform .4s ease;
+}
+
+    .grid-inner:hover .grid-title > span{
+        transform: none;
+    }
+}
+
 
 
 
