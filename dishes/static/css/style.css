@@ -208,6 +208,7 @@ div.wrapper a.logo2 {
 	display: none;
 }
 
+
 @media (max-width: 1020px) {
 	header div.hamburger {
 		display: block;
@@ -297,12 +298,199 @@ div.case h1.category-name a {
 
 div.case div.banner {
     position: relative;
+    margin-top: 100px;
+    width: 100%;
 }
 
 div.case div.banner div.text {
     position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+}
+
+div.case div.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+div.case div.banner div.text h1 {
+    color: #fabf00;
+    font-size: 82px;
+}
+
+div.case div.banner div.text p {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.case div.location {
+    position: relative;
+    width: 100%;
+}
+
+div.case div.location img {
+    width: 100%;
+    height: 100%;
+}
+
+div.case div.location h1 {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    color: #fabf00;
+    font-size: 82px;
+    transform: (0, -50%)
+    align-items: center;
+}
+
+div.reviews {
+    margin-top: 250px;
+    width: 100%;
+}
+
+div.reviews h1 {
+    color: #fff;
+    font-size: 60px;
+}
+
+div.container div.slideshow-container {
+    position: relative;
+}
+
+div.container div.slideshow-container div.mySlides {
+    position: absolute;
+    top: 60%;
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+div.container div.slideshow-container a.prev, 
+div.container div.slideshow-container a.next {
+    cursor: pointer;
+    position: absolute;
+    top: 140%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+div.container div.slideshow-container a.prev {
+    left: 0;
+}
+
+div.container div.slideshow-container a.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+div.container div.slideshow-container a.prev:hover,
+div.container div.slideshow-container a.next:hover {
+    color: #fabf00;
+}
+
+div.container div.slideshow-container div.mySlides q {
+    font-style: italic;
+    font-size: 36px;
+    color: #fabf00;
+}
+
+div.container div.slideshow-container div.mySlides p.author {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    margin: 6px 0px 0px 0px;
+}
+
+div.posts-inscription  {
+    position: relative;
+    top: 400px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.posts-inscription h1 {
+    font-size: 60px;
+    color: #fff;
+}
+
+div.posts-inscription h1 a {
+    color: #fabf00;
+}
+
+div.posts-inscription h1 a:hover {
+    text-decoration: none;
+}
+
+div.posts-gallery {
+    position: relative;
+    top: 450px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 0px;
+}
+
+div.posts-gallery div.posts-gallery__item {
+    position: relative;
+    height: 200px;
+}   
+
+
+div.posts-gallery div.posts-gallery__item a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+div.posts-gallery div.posts-gallery__item:before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+div.posts-gallery div.posts-gallery__item:hover:before {
+    opacity: 1;
+}
+
+div.posts-gallery div.posts-gallery__item div.posts-gallery__item__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.posts-gallery div.posts-gallery__item div.posts-gallery__item__content {
+    overflow: hidden;
+}
+
+div.posts-gallery div.posts-gallery__item a div.posts-gallery__item__content > i {
+    display: block;
+    transform: translateY(40px) !important;
+    transition: transform 0.4s ease;
+    color: #fff;
+}
+
+div.posts-gallery div.posts-gallery__item:hover a div.posts-gallery__item__content > i {
+    transform: translate(0) !important;
 }
 
 
@@ -316,6 +504,23 @@ div.case div.banner div.text {
         font-size: 72px;
     }
 
+    div.reviews h1 {
+        font-size: calc(24px + (60 - 24) * ((100vw - 320px) / (1200 - 320)))
+    }
+
+    div.container div.slideshow-container div.mySlides q {
+        font-size: calc(16px + (36 - 16) * ((100vw - 320px) / (1200 - 320)))
+    }
+
+    div.posts-inscription h1 {
+        font-size: calc(24px + (60 - 24) * ((100vw - 320px) / (1200 - 320)))
+    }
+}
+
+@media (max-width: 1020px) {
+    div.posts-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -327,6 +532,18 @@ div.case div.banner div.text {
     div.main-cover h3 {
         font-size: 42px;
     }
+
+    div.case div.banner div.text h1 {
+        font-size: 26px;
+    }
+
+    div.case div.banner div.text p {
+        font-size: 20px;
+    }
+
+    div.case div.location h1 {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 780px) {
@@ -337,11 +554,41 @@ div.case div.banner div.text {
     div.main-cover h3 {
         font-size: 28px;
     }
+
+    div.case div.banner div.text h1 {
+        font-size: 20px;
+    }
+
+    div.case div.banner div.text p {
+        font-size: 14px;
+    }
+
+    div.case div.location h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 520px) {
+    div.posts-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 480px) {
     div.main-cover h3 {
         top: 100%;
+    }
+
+    div.case div.banner div.text h1 {
+        font-size: 14px;
+    }
+
+    div.case div.banner div.text p {
+        font-size: 8px;
+    }
+
+    div.case div.location h1 {
+        font-size: 14px;
     }
 }
 

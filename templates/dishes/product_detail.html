@@ -36,7 +36,7 @@
 	    	<div class="item">
 	    		<img src="{{ similar_product.image.url }}" alt="">
 	    		<div class="carousel-item-content">
-	    			<h3 class="product-title">{{ similar_product.title }}</h3>
+	    			<h3 class="product-title"><a href="{{ similar_product.get_absolute_url }}" style="color: #fabf00; text-decoration: none;">{{ similar_product.title }}</a></h3>
 	    			<h3 class="product-price">${{ similar_product.price }}</h3>
 	    		</div>	    		
 	    	</div>
