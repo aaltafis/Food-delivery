@@ -16,7 +16,6 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	</head>
 	<body>
-		
 		<div class="wrapper">
 			<header class="fixed-top" style="background: rgb(14, 14, 14);">
 				<div class="hamburger">
@@ -65,13 +64,159 @@
 
 				{% endblock content %}
 			</main>
-
-			<footer>
-				
-			</footer>
-
-		
 		</div>
+
+		<div class="footer">
+		    <footer>
+		        <div class="row justify-content-start py-5 ">
+		            <div class="col-lg-2 col-2 col-sm-6 col-md-6 mt-4">
+		                <h5>cull us</h5>
+		                <ul class="nav flex-column">
+		                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">(267) 730-8765</a></li>
+		                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">(267) 730-8754</a></li>
+		                </ul>
+		            </div>
+		            <div class="col-lg-2 col-2 col-sm-6 col-md-6 mt-4">
+		                <h5>hours</h5>
+		                <ul class="nav flex-column">
+		                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">T-F: 7AM – 5PM</a></li>
+		                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">S-SU: 8AM – 5PM</a></li>
+		                </ul>
+		            </div>
+		            <div class="col-lg-2 col-2 col-sm-6 col-md-6 mt-4">
+		                <h5>location</h5>
+		                <ul class="nav flex-column">
+		                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">242 S 11th St.</a></li>
+		                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Philly, NYC 19107</a></li>
+		                </ul>
+		            </div>
+		            <div class="col-4 mt-4" style="margin-left: 200px;">
+		                <form>
+		                    <h5>NEWSLETTER SIGNUP</h5>
+		                    <p>Sign up for our e-mail and be the first who know our special offers!</p>
+		                    <div class="d-flex w-100 gap-2">
+		                        <label for="newsletter1" class="visually-hidden">Email address</label>
+		                        <input id="newsletter1" type="text" class="form-control rounded-0" placeholder="Enter your e-mail">
+		                        <button class="btn btn-primary rounded-0" type="button">JOIN US</button>
+		                    </div>
+		                </form>
+		                <ul class="nav">
+		                    <li class="nav-item mb-2"><i class="bi bi-facebook"></i></li>
+		                    <li class="nav-item mb-2"><i class="bi bi-twitter"></i></li>
+		                    <li class="nav-item mb-2"><i class="bi bi-google"></i></li>
+		                    <li class="nav-item mb-2"><i class="bi bi-instagram"></i></li>
+		                    <li class="nav-item mb-2"><i class="bi bi-pinterest"></i></li>
+		                </ul>
+		            </div>
+		        </div>
+		        <div class="d-flex mb-5" style="position: relative; bottom: 50px;">
+		            <img src="{% static 'img/logo.webp' %}" alt="">
+		            <p style="position: relative; top: 10px; left: 10px">© Wokiee 2022. All Rights Reserved</p>
+		        </div>
+		    </footer>
+		</div>
+
+		<div class="footer2">
+			<footer>
+				<section class="d-flex section-1 justify-content-beetween">
+					<h5 class="col">cull us</h5>
+					<button onclick="myFunction1()" class="">╋</button>
+				</section>
+				<div class="hide-content" id="hide-content-1" style="display: none;">
+					<h4>(267) 730-8765</h4>
+					<h4>(267) 730-8754</h4>
+				</div>
+				<section class="d-flex section-1 justify-content-beetween">
+					<h5 class="col">hours</h5>
+					<button onclick="myFunction2()" class="">╋</button>
+				</section>
+				<div class="hide-content" id="hide-content-2" style="display: none;">
+					<h4>T-F: 7AM – 5PM</h4>
+					<h4>S-SU: 8AM – 5PM</h4>
+				</div>
+				<section class="d-flex section-1 justify-content-beetween">
+					<h5 class="col">location</h5>
+					<button onclick="myFunction3()" class="">╋</button>
+				</section>
+				<div class="hide-content" id="hide-content-3" style="display: none;">
+					<h4>242 S 11th St.</h4>
+					<h4>Philly, NYC 19107</h4>
+				</div>
+				<section class="d-flex section-1 justify-content-beetween">
+					<h5 class="col">newsletter signup</h5>
+					<button onclick="myFunction4()" class="">╋</button>
+				</section>
+				<div class="hide-content" id="hide-content-4" style="display: none;">
+					<form>
+					  <p>Sign up for our e-mail and be the first who know our special offers!</p>
+					  <div class="d-block w-100 gap-2">
+					    <label for="newsletter1" class="visually-hidden">Email address</label>
+					    <input id="newsletter1" type="text" class="form-control rounded-0" placeholder="Enter your e-mail">
+					    <button class="btn btn-primary rounded-0" type="button">JOIN US</button>
+					  </div>
+					</form>
+				</div>
+				<div class="col-4">
+					<ul class="nav">
+						<li class="nav-item mb-2"><i style="font-size: 15px;" class="bi bi-facebook"></i></li>
+						<li class="nav-item mb-2"><i style="font-size: 15px;" class="bi bi-twitter"></i></li>
+						<li class="nav-item mb-2"><i style="font-size: 15px;" class="bi bi-google"></i></li>
+						<li class="nav-item mb-2"><i style="font-size: 15px;" class="bi bi-instagram"></i></li>
+						<li class="nav-item mb-2"><i style="font-size: 15px;" class="bi bi-pinterest"></i></li>
+					</ul>
+				</div>
+				<div class="text-center mb-5 mt-5" style="position: relative; bottom: 50px; text-transform: none;">
+					<img src="{% static 'img/logo.webp' %}" alt="">
+					<p style="font-family: 'Roboto', sans-serif; color: #fff; margin-top: 5px;">© Wokiee 2022. All Rights Reserved</p>
+				</div>
+			</footer>
+		</div>
+
+		<script>
+			function myFunction1() {
+			  var x = document.getElementById("hide-content-1");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+		</script>
+
+		<script>
+			function myFunction2() {
+			  var x = document.getElementById("hide-content-2");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+		</script>
+
+		<script>
+			function myFunction3() {
+			  var x = document.getElementById("hide-content-3");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+		</script>
+
+		<script>
+			function myFunction4() {
+			  var x = document.getElementById("hide-content-4");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+		</script>
+
+
 
 		<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 		<script src="{% static 'js/custom.js' %}"></script>

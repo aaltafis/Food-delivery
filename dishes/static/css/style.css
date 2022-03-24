@@ -204,7 +204,7 @@ header div.hamburger {
 	display: none;
 }
 
-div.wrapper a.logo2 {
+a.logo2 {
 	display: none;
 }
 
@@ -226,12 +226,12 @@ div.wrapper a.logo2 {
 		margin-bottom: 10px;
 	}
 
-	div.wrapper header {
+	header {
 		border-bottom: 1px solid #333333;
 		height: 80px;
 	}
 
-	div.wrapper a.logo2 {
+	a.logo2 {
 		display: block;
 		position: absolute;
 		left: 50%;
@@ -346,7 +346,7 @@ div.case div.location h1 {
 }
 
 div.reviews {
-    margin-top: 250px;
+    margin: 250px auto 50px auto;
     width: 100%;
 }
 
@@ -357,6 +357,7 @@ div.reviews h1 {
 
 div.container div.slideshow-container {
     position: relative;
+    margin: 80px 0px 10f0px 0px;
 }
 
 div.container div.slideshow-container div.mySlides {
@@ -411,31 +412,31 @@ div.container div.slideshow-container div.mySlides p.author {
     margin: 6px 0px 0px 0px;
 }
 
-div.posts-inscription  {
+div.posts-gallery-inscription {
     position: relative;
     top: 400px;
-    text-align: center;
-    text-transform: uppercase;
 }
 
-div.posts-inscription h1 {
-    font-size: 60px;
+div.posts-gallery-inscription h1 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #fff;
-}
+    font-size: 60px;
+} 
 
-div.posts-inscription h1 a {
+div.posts-gallery-inscription h1 a {
     color: #fabf00;
 }
 
-div.posts-inscription h1 a:hover {
+div.posts-gallery-inscription h1 a:hover {
     text-decoration: none;
 }
 
 div.posts-gallery {
     position: relative;
-    top: 450px;
     width: 100%;
-    margin: auto;
+    margin-top: 550px !important;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 0px;
@@ -926,3 +927,152 @@ div.owl-carousel div.item:hover div.carousel-item-content > h3 {
     }
 }
 
+/* FOOTER */
+
+.wrapper {
+    min-height: 100%;
+}
+
+div.footer {
+    margin: 100px auto 0px auto;
+    width: 92%;
+}
+
+div.footer footer {
+    height: 100px;
+    position: relative;
+    margin: 0px;
+}
+
+div.footer footer div.row div.col-2 {
+    text-transform: uppercase;
+}
+
+div.footer footer div.row div.col-2 ul li a {
+    font-size: 24px;
+    color: #fabf00 !important;
+}
+
+div.footer footer div.row div.col-2 h5 {
+    font-size: 24px;
+    color: #fff;
+}
+
+div.col-4 form h5 {
+    font-size: 24px;
+    color: #fff;
+}
+
+div.col-4 form p {
+    font-size: 15px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.col-4 form div.d-flex input {
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+div.col-4 form div.d-flex button {
+    background-color: #fabf00;
+    color: #000;
+    border: none;
+}
+
+div.col-4 ul.nav li.nav-item {
+    padding: 20px 15px 20px 0px;
+}
+
+div.col-4 ul.nav li.nav-item i {
+    color: #fabf00;
+    font-size: 20px;
+}
+
+div.d-flex p {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+div.footer2 {
+    display: none;
+}
+
+div.footer2 {
+    width: 70%;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+div.footer2 footer section {
+    margin: 50px auto;
+    border-bottom: 1px solid #393939;
+}
+
+div.footer2 footer section h5 {
+    color: #fff;
+}
+
+div.footer2 footer section button {
+    color: #393939;
+    transform: scale(1.5);
+    padding-bottom: 15px;
+    color: #999999;
+    background: none;
+    border: none;
+}
+
+div.footer2 footer div.hide-content {
+    color: #fabf00;
+}
+
+div.footer2 footer div#hide-content-4 p {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-transform: none;
+}
+
+div.footer2 footer div#hide-content-4 input {
+    margin: 5px 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.footer2 footer div#hide-content-4 button {
+    margin: 5px 0px;
+    width: 100%;
+    background-color: #fabf00;
+    color: #000;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    div.footer footer div.row div.col-4 {
+        margin-left: 0px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    div.col-4 form div.d-flex input {
+        width: 70%;
+        height: 38px;
+    }
+
+    div.col-4 form div.d-flex button {
+        width: 47%;
+        height: 38px;
+    }
+}
+
+
+@media (max-width: 790px) {
+    div.footer {
+        display: none;
+    }
+
+    div.footer2 {
+        display: block;
+    }
+}
