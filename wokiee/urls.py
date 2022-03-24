@@ -5,10 +5,15 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+	# admin
     path('admin/', admin.site.urls),
+
+    # user-management
+    path('accounts/', include('django.contrib.auth.urls')),
 
     # local
     path('', include('dishes.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
 
 
