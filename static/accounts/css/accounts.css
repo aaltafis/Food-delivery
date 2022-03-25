@@ -1,0 +1,87 @@
+div.block {
+	width: 100%;
+	margin: 70px auto;
+	display: flex;
+	gap: -10px;
+}
+
+
+div.block div.register,
+div.block div.login-form {
+	margin: 40px 50px 20px 50px;
+	padding: 30px;
+	border: 1px solid #393939;
+	width: 580px;
+	height: 378px;
+}
+
+div.block div.register h2,
+div.block div.login-form h2 {
+	color: #fff !important;
+	font-size: 20px;
+	padding: 0px 0px 10px 0px;
+}
+
+div.block div.register p,
+div.block div.login-form p {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+div.block div.register button {
+	font-size: 20px;
+	background: 0;
+	border: 2px solid #fabf00;
+	padding: 5px 25px;
+}
+
+div.block div.register button:hover {
+	border: 2px solid #fff;
+	background-color: #fff;
+}
+
+div.block div.register button a {
+	text-decoration: none;
+	color: #fabf00;
+}
+
+div.block div.register button:hover a {
+	color: #000;
+} 
+
+div.block div.login-form label {
+	display: block;
+	padding: 5px 0px 2px 0px;
+	color: #fff;
+	font-size: 20px;
+}
+
+div.block div.login-form input {
+	width: 100%;
+	padding: 6px;
+	font-family: 'Roboto', sans-serif;
+}
+
+div.block div.login-form button {
+	margin: 15px 0px 0px 0px;
+	padding: 5px 25px;
+	background: none;
+	border: 2px solid #fabf00;
+	color: #fabf00;
+	font-size: 20px;
+}
+
+
+@media (max-width: 800px) {
+	div.block {
+		display: block;
+	}
+}
+
+@media (max-width: 670px) {
+	div.block div.register,
+	div.block div.login-form {
+		width: calc(250px + (580 - 250) * ((100vw - 320px) / (1200 - 320)));
+	}
+}
