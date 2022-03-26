@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     
     # local
     'dishes',
-    'accounts',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -138,4 +138,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = 'users.CustomUser'

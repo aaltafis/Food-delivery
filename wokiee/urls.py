@@ -13,7 +13,7 @@ urlpatterns = [
 
     # local
     path('', include('dishes.urls')),
-    path('accounts/', include('accounts.urls')),
+    path('users/', include('users.urls')),
 ]
 
 

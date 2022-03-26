@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate
-from .forms import CustomUserCreationForm
+from django.contrib.auth.decorators import login_required
 
+from .forms import CustomUserCreationForm
+from .models import CustomUser, Profile
 
 
 def signup(request):
@@ -22,3 +24,13 @@ def signup(request):
 	}
 
 	return render(request, "registration/signup.html", context=context)
+
+
+def profile(request):
+	profile = request.user.profile
+
+	context = {
+		'profile': profile,
+	}
+
+	return render(request, "users/profile.html", context)
