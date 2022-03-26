@@ -1,10 +1,220 @@
 {% extends '_base.html' %}
+{% load static %}
 
 {% block title %} Food Delivery {% endblock title %}
 
 
 {% block content %}
 	
+	<div class="container position-relative text-center mt-5 main-cover">
+		<img src="{% static 'img/fooddelivery_04_x1024.webp' %}" alt="">
+		<h1 style="">Burgers</h1>
+		<h3>In New York city</h3>	
+	</div>
+
+	<div class="container info mt-5">
+		<div class="row justify-content-center" style="text-transform: uppercase;">
+			<div class="col-md-12 col-sm-12 col-lg-4 text-center">
+				<h4>cull us</h4>
+				<h3>(267) 730-8765</h3>
+				<h3>(267) 730-8754</h3>
+			</div>
+			<div class="col-md-12 col-sm-12 col-lg-4 text-center">
+				<h4>hours</h4>
+				<h3>T-F: 7AM – 5PM</h3>
+				<h3>S-SU: 8AM – 5PM</h3>
+			</div>
+			<div class="col-md-12 col-sm-12 col-lg-4 text-center">
+				<h4>location</h4>
+				<h3>242 S 11TH ST.</h3>
+				<h3>PHILLY, NYC 19107</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="case" style="position: relative; top: 250px; margin-bottom: 100px;">
+		{% for category in categories %}
+			<h1 class="category-name"><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></h1>
+			<div class="owl-carousel owl-theme d-flex">
+				{% for product in category.product_set.all %}
+					<div class="item">
+						<img src="{{ product.image.url }}" alt="">
+						<div class="carousel-item-content">
+		    				<h3 class="product-title"><a href="{{ product.get_absolute_url }}" style="color: #fabf00; text-decoration: none;">{{ product.title }}</a></h3>
+		    				<h3 class="product-price">${{ product.price }}</h3>
+		    			</div>	
+					</div>
+				{% endfor %}				
+			</div>
+		{% endfor %}
+		<div class="banner">
+			<img src="{% static 'img/banner.webp' %}" alt="">
+			<div class="text">
+				<h1>THE BEST BURGER <br> DELIVERY!</h1>
+				<p>A great about us block helps builds trust between you and your <br> customers. The more content you provide about you and your business, <br> the more confident people will be when purchasing from your store.</p>
+			</div>
+		</div>
+		<div class="location">
+			<img src="{% static 'img/location.webp' %}" alt="">
+			<h1 style="text-transform: uppercase;">Delivery <br> area</h1>
+		</div>
+	</div>
+
+	<div class="container text-center reviews">
+		<div class="slideshow-container">
+			<h1>What they're <br> saying</h1>
+			<div class="mySlides">
+		    	<q>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor!</q>
+		    	<p class="author">John Adrian</p>
+		  	</div>
+
+		  	<div class="mySlides">
+		    	<q>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</q>
+		    	<p class="author">John Titor</p>
+		  	</div>
+
+		  	<div class="mySlides">
+		    	<q> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</q>
+		    	<p class="author">Sergey Kucherov</p>
+		  	</div>
+		  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+	</div>
+
+	<div class="posts-gallery-inscription text-center">
+		<h1>
+			<a href="">@Follow</a> 
+			us on <br> instagram
+		</h1>	
+	</div>
 	
+	<div class="posts-gallery text-center">
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6LbgFAXP/">	
+					<img src="{% static 'dishes/img/1.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6Kc-FNi2/">	
+					<img src="{% static 'dishes/img/2.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6JiKFZzN/">	
+					<img src="{% static 'dishes/img/3.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6Ij8loU6/">	
+					<img src="{% static 'dishes/img/4.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6HsqleyI/">	
+					<img src="{% static 'dishes/img/5.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6G0Elh6l/">	
+					<img src="{% static 'dishes/img/6.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6FyolR9K/">	
+					<img src="{% static 'dishes/img/7.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6E3mFNGy/">	
+					<img src="{% static 'dishes/img/8.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6DrMFn25/">	
+					<img src="{% static 'dishes/img/9.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6CiTFMN4/">	
+					<img src="{% static 'dishes/img/10.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D6Ba5FR6K/">	
+					<img src="{% static 'dishes/img/11.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+			<div class="posts-gallery__item">
+				<a href="https://www.instagram.com/p/B2D5-aplqg2/">	
+					<img src="{% static 'dishes/img/12.webp' %}" alt="">
+					<div class="posts-gallery__item__content">
+						<i class="bi bi-instagram"></i>
+					</div>
+				</a>
+			</div>
+		
+	</div>
+
+
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/owlcarousel/owl.carousel.min.js' %}"></script>
+
+	<script>
+		$('.owl-carousel').owlCarousel({
+		    dots: false,
+		    margin:10,
+		    responsive:{
+		        0:{
+		            items:1,
+		        },
+		        600:{
+		            items:2,
+		        },
+		        1000:{
+		            items:3,
+		        },
+		        1040:{
+		            items:4,
+		        }
+		    }
+		})
+	</script>
+
+	<script src="{% static 'js/slider.js' %}"></script>
 
 {% endblock content %}

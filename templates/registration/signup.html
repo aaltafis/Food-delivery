@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+	
+	<div class="register-form">
+		<h2>Create an account</h2>
+		<form method="POST">
+			{% csrf_token %}
+			<h2>personal information</h2>
+			<div class="firstname-input">
+				<label>{{ form.username.label_tag }}</label>
+				<input type="text" name="username" placeholder="Enter First Name">
+			</div>
+			<div class="lastname-input">
+				<label>{{ form.lastname.label_tag }}</label>
+				<input type="text" name="lastnamename" placeholder="Enter Last Name">
+			</div>
+			<div class="email-input">
+				<label>{{ form.email.label_tag }}</label>
+				<input type="text" name="email" placeholder="Enter Email">
+			</div>
+			<div class="password1-input">
+				<label>{{ form.password1.label_tag }}</label>
+				<input type="password" name="password1" placeholder="Enter Password">
+			</div>
+			<div class="password2-input">
+				<label>{{ form.password2.label_tag }}</label>
+				<input type="password" name="password2" placeholder="Enter Password Repeat">
+			</div>
+			<button class="submit">Create</button>
+			<a href="{% url 'index' %}"><span>or</span> Return to store</a>
+		</form>
+	</div>
+	
+
+{% endblock content %}

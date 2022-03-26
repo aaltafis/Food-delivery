@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+	
+	<h1 class="text-center" style="color: #fff; margin: 170px 0px -20px 50px;">ALREADY REGISTERED?</h1>
+	<div class="block">
+		<div class="register">
+			<h2>New customer</h2>
+			<p>By creating an account with our store, you will be able to move through <br> the checkout process faster, store multiple shipping addresses, view <br> and track your orders in your account and more.</p>
+            <button><a href="{% url 'signup' %}">Create an account</a></button>
+		</div>
+		<div class="login-form">
+			<h2>login</h2>
+			<p>If you have an account with us, please log in</p>
+			<form method="POST">
+				{% csrf_token %}
+				<label>{{ form.username.label_tag }}</label>
+				<input type="text" name="username" placeholder="Enter Login">
+				{% for error in form.username.errors %}
+					<h5>{{ error }}</h5>
+				{% endfor %}
+				<label>{{ form.password.label_tag }}</label>
+				<input type="password" name="password" placeholder="Enter Password">
+				{% for error in form.password.errors %}
+					<h5>{{ error }}</h5>
+				{% endfor %}
+				<button type="submit">Login</button>
+			</form>
+		</div>
+	</div>
+	
+{% endblock content %}
