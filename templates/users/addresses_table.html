@@ -1,0 +1,40 @@
+<table style="width:100%">
+			  <tr style="border-top: 1px solid #393939;">
+			    <td>Name:</td>
+			    <td><span>{{ user.username }} {{ user.lastname }}</span></td>
+			  </tr>
+			  <tr>
+			    <td>e-mail</td>
+			    <td><span>{{ user.email }}</span></td>
+			  </tr>
+			  <tr>
+			    <td>Address:</td>
+			    {% if profile.address %}
+			    	<td><span>{{ profile.address }}</span></td>
+			    {% endif %}
+			  </tr>
+			   <tr>
+			    <td>Address2:</td>
+			    {% if profile.address2 %}
+			    	<td><span>{{ profile.address2 }}</span></td>
+			    {% endif %}
+			  </tr>
+			  <tr>
+			    <td>Country:</td>
+			    {% if profile.country %}
+			    	<td><span>{{ profile.country }}</span></td>
+			    {% endif %}
+			  </tr>
+			  <tr>
+			    <td>Zip:</td>
+			    {% if profile.zipp %}
+			    	<td><span>{{ profile.zipp }}</span></td>
+			    {% endif %}
+			  </tr>
+			  <tr>
+			    <td>Phone:</td>
+			    {% if profile.phone %}
+			    	<td><span>{{ profile.phone }}</span></td>
+			    {% endif %}
+			  </tr>
+			</table>

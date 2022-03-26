@@ -64,13 +64,15 @@ div.block div.login-form input {
 }
 
 div.block div.login-form button,
-div.register-form button {
+div.register-form button,
+div.account div.account-details a {
 	margin: 25px 0px 0px 0px;
 	padding: 5px 25px;
 	background: none;
 	border: 2px solid #fabf00;
 	color: #fabf00;
 	font-size: 20px;
+	text-decoration: none;
 }
 
 
@@ -165,4 +167,102 @@ div.register-form form a {
 		position: relative;
 		right: 30px;
 	}
+}
+
+/* ACCOUNT */
+
+div.account {
+	margin-bottom: 140px;
+}
+
+div.account h1,
+div.account h2,
+div.account h3 {
+	text-transform: uppercase;
+}
+
+div.account h1 {
+	font-size: 34px;
+	color: #fff;
+	text-align: center;
+	margin: 100px 0px 10px 0px;
+	padding: 0px 0px 50px
+}
+
+div.account h2 {
+	font-size: 24px;
+	color: #fff;
+	margin: 0px 0px 30px;
+}
+
+div.account h3 {
+	font-size: 20px;
+	color: #fff;
+	padding: 10px 0px 26px;
+}
+
+div.account p {
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	font-size: 16px;
+	margin: 16px 0px 0px;
+}
+
+div.account div.account-details h2 {
+	margin: 48px 0px 0px;
+}
+
+div.account div.account-details table {
+	margin: 20px 0px;
+}
+
+div.account div.account-details table tr {
+	border-bottom: 1px solid #393939;
+}
+
+div.account div.account-details table td {
+	color: #fff;
+	font-size: 16px;
+	padding: 9px 10px 8px 1px;
+}
+
+div.account div.account-details table td span {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: #fff;
+	padding: 10px 10px 7px 50px;	
+}
+
+div.account > button {
+	background-color: #fabf00;
+	border: 1px solid #fabf00;
+	padding: 10px 15px;
+	margin: 20px 0px 35px 0px; 
+}
+
+div.account > button:hover {
+	background-color: #fff;
+	border: 1px solid #fff;
+}
+
+div.account > button a {
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+}
+
+div.account > a {
+	text-decoration: none;
+	color: #fabf00;
+	font-size: 16px;
+	margin: 15px 0px 0px 0px;
+	display: block
+}
+
+div.account > a:hover {
+	color: #fff;
+}
+
+div.account div.account-details h3 {
+	margin-top: 50px;
 }

@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
 		<!-- APP STYLES -->
 		<link rel="stylesheet" href="{% static 'dishes/css/dishes.css' %}">
-		<link rel="stylesheet" href="{% static 'accounts/css/accounts.css' %}">
+		<link rel="stylesheet" href="{% static 'users/css/accounts.css' %}">
 		<!-- FONTS -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +68,7 @@
 					{% if user.is_authenticated %}
 						<ul class="dropdown-menu auth-menu rounded-0" aria-labelledby="dropdownMenuLink">
 							<li>
-								<a class="dropdown-item" href="#">
+								<a class="dropdown-item" href="{% url 'profile' %}">
 									<i class="bi bi-person"></i>
 									Account
 								</a>
