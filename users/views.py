@@ -34,3 +34,12 @@ def profile(request):
 	}
 
 	return render(request, "users/profile.html", context)
+
+def addresses(request):
+	profile = request.user.profile
+
+	context = {
+		'profile': profile,
+	}
+
+	return render(request, "users/addresses.html", context)

@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+
+{% block content %}
+	
+	<div class="container account">
+		<h1>Account</h1>
+		<h3>Your addresses</h3>
+		<button><a href="#">Add a new address</a></button>
+		<a href="{% url 'profile' %}">&#x21E6; Return to account page</a>
+		<div class="account-details">
+			<h3>(default addresses)</h3>			
+			{% include "users/addresses_table.html" %}
+		</div>
+	</div>
+
+{% endblock content %}

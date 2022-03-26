@@ -2,8 +2,17 @@
 
 {% block content %}
 
-	<h1 style="margin-top: 150px; color: #fff;">{{ user.username }}</h1>
-	<h1 style="margin-top: 150px; color: #fff;">{{ user.email }}</h1>
-
+	<div class="container account">
+		<h1>Account</h1>
+		<h2>My account</h2>
+		<hr class="text-light">
+		<h3>Order history</h3>
+		<p>You haven't placed any orders yet.</p>
+		<div class="account-details">
+			<h2>Account details</h2>
+			{% include "users/addresses_table.html" %}
+			<a href="{% url 'addresses' %}">View addresses</a>
+		</div>
+	</div>
 
 {% endblock content %}
