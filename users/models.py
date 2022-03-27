@@ -11,9 +11,11 @@ class Profile(models.Model):
 	firstname = models.CharField(max_length=50, verbose_name="Firstname", null=True, blank=True)
 	lastname = models.CharField(max_length=50, verbose_name="Lastname", null=True, blank=True)
 	email = models.CharField(max_length=50, verbose_name="Email", null=True, blank=True)
+	company_name = models.CharField(max_length=50, verbose_name="Company", null=True, blank=True)
 	address = models.CharField(max_length=50, verbose_name="Address", null=True, blank=True)
 	address2 = models.CharField(max_length=50, verbose_name="Address2", null=True, blank=True)
-	country = models.CharField(max_length=50, verbose_name="Couuntry", null=True, blank=True)
+	city = models.CharField(max_length=50, verbose_name="City", null=True, blank=True)
+	country = models.CharField(max_length=50, verbose_name="Country", null=True, blank=True)
 	zipp = models.CharField(max_length=50, verbose_name="Zip", null=True, blank=True)
 	phone = models.CharField(max_length=50, verbose_name="Phone", null=True, blank=True)
 

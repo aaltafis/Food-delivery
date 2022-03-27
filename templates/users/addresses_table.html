@@ -8,21 +8,22 @@
 			    <td><span>{{ user.email }}</span></td>
 			  </tr>
 			  <tr>
-			    <td>Address:</td>
-			    {% if profile.address %}
-			    	<td><span>{{ profile.address }}</span></td>
+			  	<tr>
+			  	<td>Company:</td>
+			    {% if profile.company_name %}
+			    	<td><span>{{ profile.company_name }}</span></td>
 			    {% endif %}
 			  </tr>
-			   <tr>
-			    <td>Address2:</td>
-			    {% if profile.address2 %}
-			    	<td><span>{{ profile.address2 }}</span></td>
+			  <tr>
+			    <td>Address:</td>
+			    {% if profile.address and profile.address2 %}
+			    	<td><span>{{ profile.address }} {{ profile.address2 }}</span></td>
 			    {% endif %}
 			  </tr>
 			  <tr>
 			    <td>Country:</td>
 			    {% if profile.country %}
-			    	<td><span>{{ profile.country }}</span></td>
+			    	<td><span>{{ profile.city }}, {{ profile.country }}</span></td>
 			    {% endif %}
 			  </tr>
 			  <tr>

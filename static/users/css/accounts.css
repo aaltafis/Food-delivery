@@ -266,3 +266,46 @@ div.account > a:hover {
 div.account div.account-details h3 {
 	margin-top: 50px;
 }
+
+
+/* EDIT FORM */
+
+div.edit_form {
+	margin: 50px auto 200px auto;
+}
+
+div.edit_form form label {
+	display: block;
+	color: #fff;
+	font-size: 16px;
+	margin: 20px auto 0px;
+}
+
+div.edit_form form input {
+	font-family: 'Roboto', sans-serif;
+	padding: 10px 15px;
+	width: 100%;
+	font-size: 18px;
+	color: #393939;
+}
+
+div.edit_form form button {
+	background-color: #fabf00;
+	border: 1px solid #fabf00;
+	color: #000;
+	font-size: 22px;
+	margin: 30px auto 0px;
+	padding: 5px 10px;
+}
+
+div.edit_form form button:hover {
+	background-color: #fff;
+	border: 1px solid #fff;
+}
+
+div.edit_form p.error {
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	color: #C40F1C;
+	margin-top: 10px;
+}
