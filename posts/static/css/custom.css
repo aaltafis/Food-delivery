@@ -155,6 +155,8 @@ a.name{
 a.name:hover{
     color: white;
 }
+
+
 button.btn-name{
     background: #fabf00;
 
@@ -163,7 +165,17 @@ button.btn-name:hover{
     background: white;
 }
 
+
 /*-----------------------*/
+h1.name{
+    position: relative; 
+    top: 150px; 
+    margin-left: 80px;
+    font-size: 50px;
+    color: white;"
+    font-family: 'Luckiest Guy', sans-serif;
+}
+
 
 /*920 строка*/
 /*Инстаграм сылка*/

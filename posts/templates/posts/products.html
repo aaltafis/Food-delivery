@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="container">
-    <h1 style="position: relative; top: 150px; margin-left: 80px; font-size: 50px; color: #fff;">{{ category.name }}</h1>
+    <h1 class="name">{{ category.name }}</h1>
     <div class="gallery-grid" style="margin-top: 15%;">
     	{% for p in products %}
             <div class="grid-item">
@@ -13,7 +13,7 @@
                     <div class="grid-title">
                         <span>
                             <center>
-                            	<a href="{% url 'product_detail' category.slug product.slug %}" class="name"><h1>"{{ p.title }}"</h1></a>      
+                            	<a href="{{ p.get_absolute_url }}" class="name"><h1>"{{ p.title }}"</h1></a>      
     							<h2 style="color: white;">${{ p.price }}</h2>	
                                 <button class="btn-name">ADD TO CART</button>
                             </center>

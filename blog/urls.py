@@ -25,7 +25,7 @@ urlpatterns = [
     path('', views.index, name = "index"),
     path('collections/', views.categories_view, name = "categories"),
     path('collections/<slug:category_slug>/<slug:product_slug>/', views.product_detail_view, name = "product_detail"),
-    path('collections/<slug:slug>/', views.category_product_view, name = "products"),
+    path('collections/<slug:slug>/', views.products_view, name = "products"),
 
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

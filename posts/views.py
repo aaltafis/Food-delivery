@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import  Product, Category
+from .models import Product, Category
 
 
 
@@ -18,10 +18,9 @@ def categories_view(request):
 
 
 
-def category_product_view(request, slug):
+def products_view(request, slug):
 	category = get_object_or_404(Category, slug=slug)
 	products = Category.objects.get(slug=slug).product_set.all()
-
 	context = {
 		'category': category,
 		'products':products,

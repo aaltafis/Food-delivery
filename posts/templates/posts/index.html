@@ -31,29 +31,29 @@
 		</table>
 	</center>
 </div>
-<div class="owl-carousel ">
-    {% for p in products %}
-        <div class="gallery-grid">
-            <div class="grid-item">
-                <div class="grid-inner">
-                    <img src="{{ p.image.url }}" alt="" class="grid-img">
-                    <div class="grid-title">
-                        <span>
-                            <center>
-                                <a href=""class="name">{{p.title}}</a>
-                                <h1 style="color: white;">{{p.price}}</h1>
-                                <button class="btn-name">ADD TO CART</button>
-                            </center>
-                        </span>     
+{% for c in categories %}
+    <h1 class="category-name"><a href="{{ category.get_absolute_url }}">{{c.name}}</a></h1>
+    <div class="owl-carousel ">
+        {% for product in category.product_set.all %}
+            <div class="gallery-grid">
+                <div class="grid-item">
+                    <div class="grid-inner">
+                        <img src="{{ product.image.url }}" alt="" class="grid-img">
+                        <div class="grid-title">
+                            <span>
+                                <center>
+                                    <a href="{{ product.get_absolute_url }}"class="name">{{ product.title }}</a>
+                                    <h1 style="color: white;">${{ product.price }}</h1>
+                                    <button class="btn-name">ADD TO CART</button>
+                                </center>
+                            </span>     
+                        </div>
                     </div>
-                </div>
-            </div>    
-        </div>
-    {% endfor %}  
-</div>
-
-
-
+                </div>    
+            </div>
+        {% endfor %}  
+    </div>
+{% endfor %}
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -758,9 +758,9 @@
             }
         })
     </script --> 
-</body>
+<!-- </body> -->
 
-<img src="{% static 'image/fooddelivery_02_2048x.jpg' %}" alt="" class="tt-img" style="margin-top: 10%;">
+<img src="{% static 'image/fooddelivery_02_2048x.jpg' %}" alt="" class="tt-img" style="margin-top: 40%;">
 <div class="container">
 	<h1 class="tt-blid">THE BEST BURGER <br> DELIVERY!</h1>
 	<h4 class="blid">A great about us block helps builds trust between you and your <br> customers. The more content you provide about you and your business, <br> the more confident people will be when purchasing from your store.</h4>	
