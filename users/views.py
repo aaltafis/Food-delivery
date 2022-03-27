@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, CustomUserChangeForm, ProfileChangeForm
 from .models import CustomUser, Profile
 
 
@@ -35,11 +35,22 @@ def profile(request):
 
 	return render(request, "users/profile.html", context)
 
-def addresses(request):
+def edit_profile(request):
 	profile = request.user.profile
+	user_form = CustomUserChangeForm(instance=request.user)
+	profile_form = ProfileChangeForm(instance=profile)
+
+	if request.method == "POST":
+		user_form = CustomUserChangeForm(request.POST, instance=request.user)
+		profile_form = ProfileChangeForm(request.POST, request.FILES, instance=profile)
+		if profile_form.is_valid() and user_form.is_valid():
+			user_form.save()
+			profile_form.save()
+			return redirect('profile')
 
 	context = {
-		'profile': profile,
+		'user_form': user_form,
+		'profile_form': profile_form,
 	}
 
-	return render(request, "users/addresses.html", context)
+	return render(request, "users/edit_profile.html", context)
