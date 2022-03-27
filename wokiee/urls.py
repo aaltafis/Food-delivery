@@ -14,6 +14,7 @@ urlpatterns = [
     # local
     path('', include('dishes.urls')),
     path('users/', include('users.urls')),
+    path('', include(('cart.urls', 'cart_detail'), namespace='cart')),
 ]
 
 
