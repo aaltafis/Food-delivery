@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="gallery-grid" style="margin-top: 10%;" >
+	{% for c in categories %}
+        <div class="grid-item">
+            <div class="grid-inner">
+                <img src="{{ c.image.url }}" alt="" class="grid-img">
+                <div class="grid-title">
+                    <span>
+                        <center>
+                            <a href="{{ c.get_absolute_url }}">
+								<h1>{{ c.name }}</h1>					
+							</a>
+                        </center>
+                    </span>     
+                </div>
+            </div>
+        </div>
+    {% endfor %}    
+</div>
+{% endblock content %}

@@ -27,17 +27,13 @@
 	    <div class="d-flex justify-content-center"> 	
 	      	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		        <li class="nav-item dropdown">  
-			    	<a class="link" href="{% url 'our_menu' %}" id="navbarDropdownMenuLink" role="" data-bs-toggle="dropdown" aria-expanded="false">
+			    	<a class="link" href="{% url 'categories' %}" id="navbarDropdownMenuLink" role="" data-bs-toggle="dropdown" aria-expanded="false">
 			        OUR MENU
 			      	</a>
 			      	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			        	<li><a class="dropdown-item" href="{% url 'burgers' %}">BURGERS</a></li>
-			        	<li><a class="dropdown-item" href="{% url 'salads' %}">SALADS</a></li>
-			        	<li><a class="dropdown-item" href="{% url 'snacks' %}">SNACKS</a></li>
-			        	<li><a class="dropdown-item" href="{% url 'potatoes' %}">POTATOES</a></li>
-			        	<li><a class="dropdown-item" href="{% url 'soups' %}">SOUPS</a></li>
-			        	<li><a class="dropdown-item" href="{% url 'sauces' %}">SAUCES</a></li>
-			        	<li><a class="dropdown-item" href="{% url 'beverages' %}">BEVERAGES</a></li>
+			        	{% for category in categories %}
+			        		<li><a class="dropdown-item" href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+						{% endfor %}
 			      	</ul>
 	    		</li>
 	    		<li class="nav-item">

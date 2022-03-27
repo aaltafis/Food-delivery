@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+	<section class="my-5 pt-5">
+		<div class="row mt-5 gap-5 gx-5">
+			<div class="col-lg-5 col-md-12 col-12">
+				<img src="{{ product.image.url }}" style="height: 620px; " alt="">
+			</div>
+			<div class=" col-lg-6 col-md-12 col-12 ms-5">
+				<h1 class="name" style="color: white;">{{ category.name }} "{{ product.title }}"</h1>
+				<h1 style="color: white;">${{ product.price }}</h1>
+				<button >-</button>
+				<input type="text">
+				<button >+</button>
+				<button class="btn-name">ADD TO CART</button>
+				<div class="mt-5">
+					<p style="color: white;">Vendor: Food Delivery</p>
+					<p class="mt-5" style="color: white;">We are proud to present our best premium Shopify theme - Wokiee.</p>
+					<p style="color: white;">This is multi-purpose software that can be used for any type of the store. <br> Great variety of available options will make customization process very <br> easy.</p>
+					<p style="color: white;">Please, take a look at feature list and compare with our competitors.</p>
+					<p style="color: white;">You can buy our theme and start your business online with minimal time <br> investments.</p>
+					<p style="color: white;">
+					   Wokiee support DropShipping app Oberlo. <br>
+					   Wokiee Shopify theme is powerfool tool to create personal webshop.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>					
+
+
+
+
+
+
+{% endblock content %}

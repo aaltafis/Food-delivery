@@ -2,8 +2,65 @@ from django.shortcuts import render, get_object_or_404
 from .models import  Product, Category
 
 
+
 def index(request):
-	return render (request, "posts/index.html")
+	return render(request, "posts/index.html")
+
+
+def categories_view(request):
+	categories = Category.objects.all()
+	context = {
+		'categories': categories
+	}
+
+	return render(request, "posts/categories.html", context)
+
+
+
+
+def category_product_view(request, slug):
+	category = get_object_or_404(Category, slug=slug)
+	products = Category.objects.get(slug=slug).product_set.all()
+
+	context = {
+		'category': category,
+		'products':products,
+	}
+
+	return render(request, "posts/products.html", context)
+
+
+
+
+def product_detail_view(request, category_slug, product_slug):
+	category = get_object_or_404(Category, slug=category_slug)
+	product = get_object_or_404(Product, slug=product_slug)
+	context = {
+		'product': product,
+		'category': category,
+	}
+
+	return render(request, "posts/product_detail.html", context) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def our_menu(request):
 	return render (request, "posts/our_menu.html")

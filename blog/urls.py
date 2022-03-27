@@ -23,14 +23,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name = "index"),
-    path('our_menu', views.our_menu, name = "our_menu"),
-    path('burgers', views.burgers, name = "burgers"),
-    path('salads', views.salads, name = "salads"),
-    path('snacks', views.snacks, name="snacks"),
-    path('potatoes', views.potatoes, name="potatoes"),
-    path('soups', views.soups, name="soups"),
-    path('sauces', views.sauces, name="sauces"),
-    path('beverages', views.beverages, name="beverages"),
+    path('collections/', views.categories_view, name = "categories"),
+    path('collections/<slug:category_slug>/<slug:product_slug>/', views.product_detail_view, name = "product_detail"),
+    path('collections/<slug:slug>/', views.category_product_view, name = "products"),
 
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
