@@ -1,0 +1,11 @@
+div.cart-table table {
+	width: 100%;
+	border-top: 1px solid #393939;
+	border-bottom: 1px solid #393939;
+}
+
+div.cart-table table img {
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+}
