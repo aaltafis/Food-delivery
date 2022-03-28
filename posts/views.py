@@ -4,10 +4,16 @@ from .models import Product, Category
 
 
 def index(request):
-	return render(request, "posts/index.html")
+	categories = Category.objects.all()
+	product = Product.objects.all()
+	context = {
+		'categories': categories,
+		'product': product
+		}
+	return render(request, "posts/index.html", context)
 
 
-def categories_view(request):
+def category(request):
 	categories = Category.objects.all()
 	context = {
 		'categories': categories
@@ -17,13 +23,12 @@ def categories_view(request):
 
 
 
-
-def products_view(request, slug):
+def products(request, slug):
 	category = get_object_or_404(Category, slug=slug)
-	products = Category.objects.get(slug=slug).product_set.all()
+	product = Category.objects.get(slug=slug).product_set.all()
 	context = {
 		'category': category,
-		'products':products,
+		'product':product
 	}
 
 	return render(request, "posts/products.html", context)
@@ -31,12 +36,12 @@ def products_view(request, slug):
 
 
 
-def product_detail_view(request, category_slug, product_slug):
+def product_detail(request, category_slug, product_slug):
 	category = get_object_or_404(Category, slug=category_slug)
 	product = get_object_or_404(Product, slug=product_slug)
 	context = {
 		'product': product,
-		'category': category,
+		'category': category
 	}
 
 	return render(request, "posts/product_detail.html", context) 

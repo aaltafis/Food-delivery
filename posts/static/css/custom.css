@@ -139,7 +139,7 @@ div.grid-title{
 }
 .grid-title > span{
     display: block;
-    transform: translateY(135px);
+    transform: translateY(140px);
     transition: transform .4s ease;
 }
 
@@ -259,10 +259,10 @@ h1.tt-blid{
     color: white;
 }
 img.tt-img{
-    width: 2110px;
+    width: 1903px;
 }
 img.tt-img-2{
-    width: 2110px;
+    width: 1903px;
 }
 h1.tt-title{
     position: relative;
