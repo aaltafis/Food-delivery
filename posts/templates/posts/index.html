@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
 <div class="container">
 	<center style="margin-top: 10%;">
 		<img src="{% static 'image/fooddelivery_04_x1024.jpg' %}" alt="" class="image">
@@ -31,7 +27,7 @@
 		</table>
 	</center>
 </div>
-{% for c in category %}
+{% for c in categories %}
     <center style="margin-top: 10%"><h1><a href="{{ c.get_absolute_url }}" class="big-link">{{c.name}}</a></h1></center>
     <div class="owl-carousel ">
         {% for p in product %}
@@ -55,6 +51,8 @@
     </div>
 {% endfor %}
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript">
@@ -82,7 +80,7 @@
     
 </body>
 
-<img src="{% static 'image/fooddelivery_02_2048x.jpg' %}" alt="" class="tt-img" style="margin-top: 40%;">
+<img src="{% static 'image/fooddelivery_02_2048x.jpg' %}" alt="" class="tt-img" style="margin-top: 10%;">
 <div class="container">
 	<h1 class="tt-blid">THE BEST BURGER <br> DELIVERY!</h1>
 	<h4 class="blid">A great about us block helps builds trust between you and your <br> customers. The more content you provide about you and your business, <br> the more confident people will be when purchasing from your store.</h4>	

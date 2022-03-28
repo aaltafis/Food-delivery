@@ -26,16 +26,15 @@
     	</button>
 	    <div class="d-flex justify-content-center"> 	
 	      	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		        <li class="nav-item dropdown">  
-			    	<a class="link" href="{% url 'categories' %}" id="navbarDropdownMenuLink" role="" data-bs-toggle="dropdown" aria-expanded="false">
-			        OUR MENU
-			      	</a>
-			      	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-			        	{% for category in categories %}
-			        		<li><a class="dropdown-item" href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
-						{% endfor %}
-			      	</ul>
-	    		</li>
+	      		<div class="dropdown">
+        			<a class="link" href="{% url 'categories' %}">OUR MENU</a>
+			        <div class="dropdown-content">
+			        	{% for c in categories %}
+			            	<a class="link"  href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+			            {% endfor %}
+			        </div>
+			    </div>
+
 	    		<li class="nav-item">
 	          		<a class="link" href="https://wokiee-demos.myshopify.com/pages/about">ABOUT US</a>
 	        	</li>
@@ -124,3 +123,7 @@
 		<p class="tt-box">© Wokiee 2021. All Rights Reserved</p>
 	</div>
 </div>
+
+
+
+

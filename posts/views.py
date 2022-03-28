@@ -3,6 +3,9 @@ from .models import Product, Category
 
 
 
+
+
+
 def index(request):
 	categories = Category.objects.all()
 	product = Product.objects.all()
