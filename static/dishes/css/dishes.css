@@ -768,8 +768,8 @@ section.sproduct div.row div.product-info h2.product-price {
     color: #fff; 
 }
 
-section.sproduct div.row div.product-info input {
-    width: 140px;
+section.sproduct div.row div.product-info button.quantity-form  {
+    width: 10%;
     height: 50px;
     text-align: center;
     margin: 0 0 0 0;
@@ -789,8 +789,14 @@ section.sproduct div.row div.product-info input:focus {
     outline: none;
 }
 
-section.sproduct div.row div.product-info button.buy-btn {
-    width: 380px;
+section.sproduct div.row div.product-info form select#id_quantity {
+    width: 15%;
+    height: 50px;
+    padding: 0px 0px 0px 30px;
+}
+
+section.sproduct div.row div.product-info input.buy-btn {
+    width: 80%;
     height: 50px;
     border: 0;
     background: #fabf00;
@@ -889,12 +895,12 @@ div.owl-carousel div.item:hover div.carousel-item-content > h3 {
         font-size: 15px;
     }
 
-    section.sproduct div.row div.product-info input {
+    section.sproduct div.row div.product-info button.quantity-form {
         width: 100px;
     }
 
-    section.sproduct div.row div.product-info button.buy-btn {
-        width: 300px;
+    section.sproduct div.row div.product-info input.buy-btn {
+        width: 400px !important;
     }
 }
 
@@ -908,11 +914,11 @@ div.owl-carousel div.item:hover div.carousel-item-content > h3 {
         margin-left: 0px !important;
     }
 
-    section.sproduct div.row div.product-info input {
+    section.sproduct div.row div.product-info button.quantity-form {
         width: 80px;
     }
 
-    section.sproduct div.row div.product-info button.buy-btn {
+    section.sproduct div.row div.product-info input.buy-btn {
         width: 250px;
     }
 }
@@ -935,7 +941,20 @@ div.owl-carousel div.item:hover div.carousel-item-content > h3 {
 @media (max-width: 620px) {
    section.sproduct div.row div.product-image img {
        height: 400px !important;
-   } 
+   }
+
+    section.sproduct div.row div.product-info form select#id_quantity {
+        width: 20%;
+        padding: 0px 0px 0px 10px;        
+    }
+
+    section.sproduct div.row div.product-info input.buy-btn {
+        width: 70% !important;
+    }
+}
+
+section.sproduct div.row div.product-info input.buy-btn {
+  
 }
 
 @media (max-width: 350px) {
@@ -943,12 +962,12 @@ div.owl-carousel div.item:hover div.carousel-item-content > h3 {
         height: 300px !important;
     }
 
-    section.sproduct div.row div.product-info input {
+    section.sproduct div.row div.product-info button {
         width: 80px;
     }
 
-    section.sproduct div.row div.product-info button.buy-btn {
-        width: 150px;
+    section.sproduct div.row div.product-info form input.buy-btn {
+        width: 500px;
     }
 }
 

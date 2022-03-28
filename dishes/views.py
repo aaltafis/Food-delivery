@@ -4,6 +4,7 @@ from django.db.models import Q
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 
+
 def index(request):
     """ Главная страница """
 
