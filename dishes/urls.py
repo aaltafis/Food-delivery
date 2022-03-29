@@ -8,5 +8,5 @@ urlpatterns = [
     path('collections/<slug:category_slug>/<slug:product_slug>/',
          views.product_detail_page_view, name="product_detail"),
     path('collections/<slug:slug>/',
-         views.category_product_page_view, name="category_page"),
+         views.category_products_page_view, name="category_page"),
 ]

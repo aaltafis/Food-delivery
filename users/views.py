@@ -9,6 +9,7 @@ from .models import CustomUser, Profile
 
 def signup(request):
     """ Регистрация пользователя """
+
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
@@ -30,6 +31,7 @@ def signup(request):
 
 def profile(request):
     """ Просмотр профиля """
+
     profile = request.user.profile
 
     context = {
@@ -41,6 +43,7 @@ def profile(request):
 
 def edit_profile(request):
     """ Редактирование профиля """
+    
     profile = request.user.profile
     user_form = CustomUserChangeForm(instance=request.user)
     profile_form = ProfileChangeForm(instance=profile)

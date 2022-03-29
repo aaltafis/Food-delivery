@@ -23,7 +23,7 @@ def categories_page_view(request):
     return render(request, "dishes/categories.html", context)
 
 
-def category_product_page_view(request, slug):
+def category_products_page_view(request, slug):
     """ Страница с продуктами определённой категории """
 
     category = get_object_or_404(Category, slug=slug)
@@ -39,6 +39,7 @@ def category_product_page_view(request, slug):
 
 def product_detail_page_view(request, category_slug, product_slug):
     """ Страница детального просмотра продукта """
+    
     category = get_object_or_404(Category, slug=category_slug)
     product = get_object_or_404(Product, slug=product_slug)
     similar_products = Category.objects.get(slug=category_slug).product_set.filter(~Q(slug=product_slug))
