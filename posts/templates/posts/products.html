@@ -5,7 +5,7 @@
 
 <div class="container">
     <h1 class="name">{{ category.name }}</h1>
-    <div class="gallery-grid" style="margin-top: 15%;">
+    <div class="gallery-grid" style="margin-top: 10%;">
     	{% for p in product %}
             <div class="grid-item">
                 <div class="grid-inner">
@@ -13,7 +13,7 @@
                     <div class="grid-title">
                         <span>
                             <center>
-                            	<a href="{{ p.get_absolute_url }}" class="name"><h1>"{{ p.title }}"</h1></a>      
+                            	<a href="{{ p.get_absolute_url }}" class="name"><h1><< {{ p.title }} >></h1></a>      
     							<h2 style="color: white;">${{ p.price }}</h2>	
                                 <button class="btn-name">ADD TO CART</button>
                             </center>

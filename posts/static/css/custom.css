@@ -148,10 +148,14 @@ a.name{
 a.name:hover{
     color: white;
 }
-
+.title-guy{
+    font-family: 'Luckiest Guy', sans-serif;
+    color: white;
+}
 
 button.btn-name{
     background: #fabf00;
+    font-family: 'Luckiest Guy', sans-serif;
 
 }
 button.btn-name:hover{
@@ -162,11 +166,11 @@ button.btn-name:hover{
 /*-----------------------*/
 h1.name{
     position: relative; 
-    top: 150px; 
-    margin-left: 80px;
-    font-size: 50px;
-    color: white;"
     font-family: 'Luckiest Guy', sans-serif;
+    top: 80px; 
+    margin-left: 80px;
+    font-size: 70px;
+    color: white;"
 }
 
 
@@ -384,6 +388,8 @@ button.btn:hover{
         transform: none;
     }
 }
+
+
 
 
 

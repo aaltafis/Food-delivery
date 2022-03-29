@@ -5,8 +5,8 @@ from django.template.defaultfilters import slugify
 # Create your models here.
 
 class Category(models.Model):
-	slug = models.SlugField(null=True, blank=True, unique=True, db_index=True, verbose_name="URL")
 	name = models.CharField(max_length=30, verbose_name="Название")
+	slug = models.SlugField(null=True, blank=True, unique=True, db_index=True, verbose_name="URL")
 	image = models.ImageField(upload_to="category_image/", null=True, blank=True, verbose_name="Изображение")
 
 	def __str__(self):
@@ -19,6 +19,7 @@ class Category(models.Model):
 	def save(self, *args, **kwargs):
 		self.slug = slugify(self.name)
 		return super().save(*args, **kwargs)
+
 
 
 	class Meta:
@@ -34,10 +35,10 @@ class Product(models.Model):
 	slug = models.SlugField(null=True,  blank=True, unique=True, db_index=True, verbose_name="URL")
 
 	def __str__(self):
-		return self.title
+		return f"{self.title} - {self.category}"
 
 	def get_absolute_url(self):
-		return reverse('product_detail', kwargs = {'category_slug': self.category.slug, 'product_slug': self.slug})
+		return reverse('product_detail', kwargs={'category_slug': self.category.slug, 'product_slug': self.slug})
 
 	def save(self, *args, **kwargs):
 		self.slug = slugify(self.title)

@@ -3,26 +3,24 @@ from .models import Product, Category
 
 
 
+# def index(request):
+# 	categories = Category.objects.all()
+# 	product = Product.objects.all()
+# 	context = {
+# 		'categories': categories,
+# 		'product': product,
+# 	}
 
-
-
-def index(request):
-	categories = Category.objects.all()
-	product = Product.objects.all()
-	context = {
-		'categories': categories,
-		'product': product
-		}
-	return render(request, "posts/index.html", context)
+# 	return render(request, "posts/index.html", context)
 
 
 def category(request):
-	categories = Category.objects.all()
+	category = Category.objects.all()
 	context = {
-		'categories': categories
+		'category': category
 	}
 
-	return render(request, "posts/categories.html", context)
+	return render(request, "posts/category.html", context)
 
 
 
@@ -61,56 +59,20 @@ def product_detail(request, category_slug, product_slug):
 
 
 
-
-
-
-
-
-
-
-
-def our_menu(request):
-	return render (request, "posts/our_menu.html")
-
-
-def burgers(request):
-	products = Product.objects.all()
+def index(request):
 	categories = Category.objects.all()
+	burger_category = Category.objects.filter(product__title="THE DADDY")
+	burger_product = Product.objects.filter(category__name="BURGERS")
+	salad_category = Category.objects.filter(product__title="SALAD NY")
+	salad_product = Product.objects.filter(category__name="SALADS")
 	context = {
-		'products': products,
-		'categories': categories
+		'categories': categories,
+		'burger_category': burger_category,
+		'burger_product': burger_product,
+		'salad_category': salad_category,
+		'salad_product': salad_product,
 	}
-	return render(request, "posts/burgers.html")
 
-def salads(request):
-	products = Product.objects.all()
-	categories = Category.objects.all()
-	context = {
-		'products': products,
-		'categories': categories
-	}
-	return render(request, "posts/salads.html")
-
-
-def snacks(request):
-	products = Product.objects.all()
-	categories = Category.objects.all()
-	context = {
-		'products': products,
-		'categories': categories
-	}
-	return render(request, "posts/snacks.html")
-
-def potatoes(request):
-	return render(request, "posts/potatoes.html")
-
-def soups(request):
-	return render(request, "posts/soups.html")
-
-def sauces(request):
-	return render(request, "posts/sauces.html")
-
-def beverages(request):
-	return render(request, "posts/beverages.html")
+	return render(request, "posts/index.html", context)
 
 
