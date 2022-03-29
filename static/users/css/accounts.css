@@ -1,311 +1,315 @@
 div.block {
-	width: 100%;
-	margin: 70px auto;
-	display: flex;
-	gap: -10px;
+    width: 100%;
+    margin: 70px auto;
+    display: flex;
+    gap: -10px;
 }
-
 
 div.block div.register,
 div.block div.login-form {
-	margin: 40px 50px 20px 50px;
-	padding: 30px;
-	border: 1px solid #393939;
-	width: 580px;
-	height: 378px;
+    margin: 40px 50px 20px 50px;
+    padding: 30px;
+    border: 1px solid #393939;
+    width: 580px;
+    height: 378px;
 }
 
 div.block div.register h2,
 div.block div.login-form h2 {
-	color: #fff !important;
-	font-size: 20px;
-	padding: 0px 0px 10px 0px;
+    color: #fff !important;
+    font-size: 20px;
+    padding: 0px 0px 10px 0px;
 }
 
 div.block div.register p,
 div.block div.login-form p {
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 div.block div.register button {
-	font-size: 20px;
-	background: 0;
-	border: 2px solid #fabf00;
-	padding: 5px 25px;
+    font-size: 20px;
+    background: 0;
+    border: 2px solid #fabf00;
+    padding: 5px 25px;
 }
 
 div.block div.register button:hover {
-	border: 2px solid #fff;
-	background-color: #fff;
+    border: 2px solid #fff;
+    background-color: #fff;
 }
 
 div.block div.register button a {
-	text-decoration: none;
-	color: #fabf00;
+    text-decoration: none;
+    color: #fabf00;
 }
 
 div.block div.register button:hover a {
-	color: #000;
+    color: #000;
 } 
 
 div.block div.login-form label {
-	display: block;
-	padding: 5px 0px 2px 0px;
-	color: #fff;
-	font-size: 20px;
+    display: block;
+    padding: 5px 0px 2px 0px;
+    color: #fff;
+    font-size: 20px;
 }
 
 div.block div.login-form input {
-	width: 100%;
-	padding: 6px;
-	font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 6px;
+    font-family: 'Roboto', sans-serif;
 }
 
 div.block div.login-form button,
 div.register-form button,
 div.account div.account-details a {
-	margin: 25px 0px 0px 0px;
-	padding: 5px 25px;
-	background: none;
-	border: 2px solid #fabf00;
-	color: #fabf00;
-	font-size: 20px;
-	text-decoration: none;
+    margin: 25px 0px 0px 0px;
+    padding: 5px 25px;
+    background: none;
+    border: 2px solid #fabf00;
+    color: #fabf00;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-
 @media (max-width: 800px) {
-	div.block {
-		display: block;
-	}
+
+    div.block {
+        display: block;
+    }
 }
 
 @media (max-width: 670px) {
-	div.block div.register,
-	div.block div.login-form {
-		width: calc(250px + (580 - 250) * ((100vw - 320px) / (1200 - 320)));
-	}
+
+    div.block div.register,
+    div.block div.login-form {
+        width: calc(250px + (580 - 250) * ((100vw - 320px) / (1200 - 320)));
+    }
 }
+
 
 /* REGISTRATION */
 
 div.register-form {
-	width: 580px;
-	margin: 200px auto 0px auto;
-	height: auto;
+    width: 580px;
+    margin: 200px auto 0px auto;
+    height: auto;
 }
 
 div.register-form > h2 {
-	text-align: center;
-	color: #fff !important;
-	margin: 32px 39px 20px;
-	font-size: 34px;
+    text-align: center;
+    color: #fff !important;
+    margin: 32px 39px 20px;
+    font-size: 34px;
 }
 
 div.register-form form {
-	border: 1px solid #393939;
-	padding: 50px;
-	width: 100%;
-	height: 100%;
+    border: 1px solid #393939;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
 }
 
 div.register-form form > h2 {
-	color: #fff;
-	font-size: 20px;
+    color: #fff;
+    font-size: 20px;
 }
 
 div.register-form div label {
-	display: block;
-	color: #fff;
-	font-size: 16px;
-	padding: 5px 0px 2px 0px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 0px 2px 0px;
 }
 
 div.register-form form div input  {
-	width: 100%;
-	font-family: 'Roboto', sans-serif;
-	padding: 10px 12px 10px 15px;
-	border: none;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 12px 10px 15px;
+    border: none;
 }
 
 div.register-form form span {
-	color: #fff;
-	margin: 5px 0px 0px 25px
+    color: #fff;
+    margin: 5px 0px 0px 25px
 }
 
 div.register-form form a {
-	text-decoration: none;
-	color: #fabf00;
-	margin: 5px 0px 0px 5px;
+    text-decoration: none;
+    color: #fabf00;
+    margin: 5px 0px 0px 5px;
 }
 
 div.register-form form a:hover {
-	color: #fff;
+    color: #fff;
 }
 
 div.register-form form span,
 div.register-form form a {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width: 600px) {
-	div.register-form {
-		width: 400px;
-	}
+
+    div.register-form {
+        width: 400px;
+    }
 }
 
 
 @media (max-width: 420px) {
-	div.register-form {
-		width: 300px;
-	}
 
-	div.register-form form a {
-		display: block;
-		position: relative;
-		right: 30px;
-	}
+    div.register-form {
+        width: 300px;
+    }
+
+    div.register-form form a {
+        display: block;
+        position: relative;
+        right: 30px;
+    }
 }
+
 
 /* ACCOUNT */
 
 div.account {
-	margin-bottom: 140px;
+    margin-bottom: 140px;
 }
 
 div.account h1,
 div.account h2,
 div.account h3 {
-	text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 div.account h1 {
-	font-size: 34px;
-	color: #fff;
-	text-align: center;
-	margin: 100px 0px 10px 0px;
-	padding: 0px 0px 50px
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    margin: 100px 0px 10px 0px;
+    padding: 0px 0px 50px
 }
 
 div.account h2 {
-	font-size: 24px;
-	color: #fff;
-	margin: 0px 0px 30px;
+    font-size: 24px;
+    color: #fff;
+    margin: 0px 0px 30px;
 }
 
 div.account h3 {
-	font-size: 20px;
-	color: #fff;
-	padding: 10px 0px 26px;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 0px 26px;
 }
 
 div.account p {
-	font-family: 'Roboto', sans-serif;
-	color: #fff;
-	font-size: 16px;
-	margin: 16px 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    margin: 16px 0px 0px;
 }
 
 div.account div.account-details h2 {
-	margin: 48px 0px 0px;
+    margin: 48px 0px 0px;
 }
 
 div.account div.account-details table {
-	margin: 20px 0px;
+    margin: 20px 0px;
 }
 
 div.account div.account-details table tr {
-	border-bottom: 1px solid #393939;
+    border-bottom: 1px solid #393939;
 }
 
 div.account div.account-details table td {
-	color: #fff;
-	font-size: 16px;
-	padding: 9px 10px 8px 1px;
+    color: #fff;
+    font-size: 16px;
+    padding: 9px 10px 8px 1px;
 }
 
 div.account div.account-details table td span {
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
-	color: #fff;
-	padding: 10px 10px 7px 50px;	
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 10px 7px 50px;    
 }
 
 div.account > button {
-	background-color: #fabf00;
-	border: 1px solid #fabf00;
-	padding: 10px 15px;
-	margin: 20px 0px 35px 0px; 
+    background-color: #fabf00;
+    border: 1px solid #fabf00;
+    padding: 10px 15px;
+    margin: 20px 0px 35px 0px; 
 }
 
 div.account > button:hover {
-	background-color: #fff;
-	border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #fff;
 }
 
 div.account > button a {
-	text-decoration: none;
-	color: #000;
-	font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
 }
 
 div.account > a {
-	text-decoration: none;
-	color: #fabf00;
-	font-size: 16px;
-	margin: 15px 0px 0px 0px;
-	display: block
+    text-decoration: none;
+    color: #fabf00;
+    font-size: 16px;
+    margin: 15px 0px 0px 0px;
+    display: block
 }
 
 div.account > a:hover {
-	color: #fff;
+    color: #fff;
 }
 
 div.account div.account-details h3 {
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 
 /* EDIT FORM */
 
 div.edit_form {
-	margin: 50px auto 200px auto;
+    margin: 50px auto 200px auto;
 }
 
 div.edit_form form label {
-	display: block;
-	color: #fff;
-	font-size: 16px;
-	margin: 20px auto 0px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    margin: 20px auto 0px;
 }
 
 div.edit_form form input {
-	font-family: 'Roboto', sans-serif;
-	padding: 10px 15px;
-	width: 100%;
-	font-size: 18px;
-	color: #393939;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 18px;
+    color: #393939;
 }
 
 div.edit_form form button {
-	background-color: #fabf00;
-	border: 1px solid #fabf00;
-	color: #000;
-	font-size: 22px;
-	margin: 30px auto 0px;
-	padding: 5px 10px;
+    background-color: #fabf00;
+    border: 1px solid #fabf00;
+    color: #000;
+    font-size: 22px;
+    margin: 30px auto 0px;
+    padding: 5px 10px;
 }
 
 div.edit_form form button:hover {
-	background-color: #fff;
-	border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #fff;
 }
 
 div.edit_form p.error {
-	font-size: 18px;
-	font-family: 'Roboto', sans-serif;
-	color: #C40F1C;
-	margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #C40F1C;
+    margin-top: 10px;
 }

@@ -2,24 +2,24 @@
 
 
 {% block content %}
-	
+    
 
-	<h1 style="position: relative; top: 150px; margin-left: 80px; font-size: 50px; color: #fff;">{{ category.name }}</h1>
-	
-	<div class="gallery-grid">
-		{% for product in products %}
-			<div class="grid-item">
-				<div class="grid-item__inner">
-					<img src="{{ product.image.url }}" alt="">
-					<a href="{{ product.get_absolute_url }}">
-						<div class="grid-item__content">
-							<h2 style="color: #fabf00; font-size: 40px;">{{ product.title }}</h2>
-							<h2 style="color: #ffffff; font-size: 40px;">${{ product.price }}</h2>
-						</div>
-					</a>
-				</div>
-			</div>
-		{% endfor %}
-	</div>
+    <h1 style="position: relative; top: 150px; margin-left: 80px; font-size: 50px; color: #fff;">{{ category.name }}</h1>
+    
+    <div class="gallery-grid">
+        {% for product in products %}
+            <div class="grid-item">
+                <div class="grid-item__inner">
+                    <img src="{{ product.image.url }}" alt="">
+                    <a href="{{ product.get_absolute_url }}">
+                        <div class="grid-item__content">
+                            <h2 style="color: #fabf00; font-size: 40px;">{{ product.title }}</h2>
+                            <h2 style="color: #ffffff; font-size: 40px;">${{ product.price }}</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock content %}

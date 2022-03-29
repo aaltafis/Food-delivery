@@ -7,39 +7,39 @@
 
 {% block content %}
     <div class="container cart-table">
-        <h1>Shopping cart</h1>
-        <table class="cart" style="margin-top: 200px;">
-          <tbody>
+    <h1>Shopping cart</h1>
+    <table class="cart" style="margin-top: 200px;">
+        <tbody>
             {% for item in cart %}
-              {% with product=item.product %}
-                <tr style="border-top: 1px solid #393939; border-bottom: 1px solid #393939;">
-                  <td>
+            {% with product=item.product %}
+            <tr style="border-top: 1px solid #393939; border-bottom: 1px solid #393939;">
+                <td>
                     <a href="{{ product.get_absolute_url }}">
-                      <img src="{{ product.image.url }}">
+                    <img src="{{ product.image.url }}">
                     </a>
-                  </td>
-                  <td class="product-title">{{ product.category }} "{{ product.title }}"</td>
-                  <td>
+                </td>
+                <td class="product-title">{{ product.category }} "{{ product.title }}"</td>
+                <td>
                     <form action="{% url 'cart:add_cart' product.id %}" method="post">
-                      <span class="quantity">{{ item.update_quantity_form.quantity }}</span>
-                      {{ item.update_quantity_form.update }}
-                      <input type="submit" value="Update">
-                      {% csrf_token %}
+                        <span class="quantity">{{ item.update_quantity_form.quantity }}</span>
+                        {{ item.update_quantity_form.update }}
+                        <input type="submit" value="Update">
+                        {% csrf_token %}
                     </form>
-                  </td>
-                  <td class="price">${{ item.price }}</td>
-                  <td class="total_price">${{ item.total_price }}</td>
-                  <td>
-                      <a href="{% url 'cart:remove_cart' product.id %}">
-                        <i class="bi bi-trash"></i>
-                      </a>
-                  </td>
-                </tr>
-              {% endwith %}
+                </td>
+                <td class="price">${{ item.price }}</td>
+                <td class="total_price">${{ item.total_price }}</td>
+                <td>
+                    <a href="{% url 'cart:remove_cart' product.id %}">
+                    <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endwith %}
             {% endfor %}
-          </tbody>
-        </table>
-        <h3>Total: <span>${{ cart.get_total_price }}</span></h3>
-        <button>Buy</button>
-    </div>
+        </tbody>
+    </table>
+    <h3>Total: <span>${{ cart.get_total_price }}</span></h3>
+    <button>Buy</button>
+</div>
 {% endblock %}

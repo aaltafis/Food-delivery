@@ -2,83 +2,83 @@
 
 
 {% block content %}
-	
-	<div class="container edit_form">
-		<form action="{% url 'edit_profile' %}" method="POST">
-			{% csrf_token %}
-			<label>{{ user_form.username.label_tag }}</label>
-			<input type="text" name="username" value="{{ user.username }}">
+    
+    <div class="container edit_form">
+        <form action="{% url 'edit_profile' %}" method="POST">
+            {% csrf_token %}
+            <label>{{ user_form.username.label_tag }}</label>
+            <input type="text" name="username" value="{{ user.username }}">
 
-			{% for username_error in user_form.username.errors %}
-				<p class="error">{{ username_error }}</p>
-			{% endfor %}
+            {% for username_error in user_form.username.errors %}
+                <p class="error">{{ username_error }}</p>
+            {% endfor %}
 
-			<label>{{ user_form.lastname.label_tag }}</label>
-			<input type="text" name="lastname" value="{{ user.lastname }}">
+            <label>{{ user_form.lastname.label_tag }}</label>
+            <input type="text" name="lastname" value="{{ user.lastname }}">
 
-			{% for lastname_error in user_form.lastname.errors %}
-				<p class="error">{{ lastname_error }}</p>
-			{% endfor %}
+            {% for lastname_error in user_form.lastname.errors %}
+                <p class="error">{{ lastname_error }}</p>
+            {% endfor %}
 
-			<label>{{ user_form.email.label_tag }}</label>
-			<input type="text" name="email" value="{{ user.email }}">
+            <label>{{ user_form.email.label_tag }}</label>
+            <input type="text" name="email" value="{{ user.email }}">
 
-			{% for email_error in user_form.email.errors %}
-				<p class="error">{{ email_error }}</p>
-			{% endfor %}
+            {% for email_error in user_form.email.errors %}
+                <p class="error">{{ email_error }}</p>
+            {% endfor %}
 
-			<label>{{ profile_form.company_name.label_tag }}</label>
-			<input type="text" name="company_name" value="{{ user.profile.company_name }}">
+            <label>{{ profile_form.company_name.label_tag }}</label>
+            <input type="text" name="company_name" value="{{ user.profile.company_name }}">
 
-			{% for company_error in user_form.company.errors %}
-				<p class="error">{{ company_error }}</p>
-			{% endfor %}
+            {% for company_error in user_form.company.errors %}
+                <p class="error">{{ company_error }}</p>
+            {% endfor %}
 
-			<label>{{ profile_form.address.label_tag }}</label>
-			<input type="text" name="address" value="{{ user.profile.address }}" >
+            <label>{{ profile_form.address.label_tag }}</label>
+            <input type="text" name="address" value="{{ user.profile.address }}" >
 
-			{% for address_error in user_form.address.errors %}
-				<p class="error">{{ address_error }}</p>
-			{% endfor %}
+            {% for address_error in user_form.address.errors %}
+                <p class="error">{{ address_error }}</p>
+            {% endfor %}
 
-			<label>{{ profile_form.address2.label_tag }}</label>
-			<input type="text" name="address2" value="{{ user.profile.address2 }}">
+            <label>{{ profile_form.address2.label_tag }}</label>
+            <input type="text" name="address2" value="{{ user.profile.address2 }}">
 
-			{% for address2_error in user_form.address2.errors %}
-				<p class="error">{{ address2_error }}</p>
-			{% endfor %}
+            {% for address2_error in user_form.address2.errors %}
+                <p class="error">{{ address2_error }}</p>
+            {% endfor %}
 
-			<label>{{ profile_form.city.label_tag }}</label>
-			<input type="text" name="city" value="{{ user.profile.city }}" >
+            <label>{{ profile_form.city.label_tag }}</label>
+            <input type="text" name="city" value="{{ user.profile.city }}" >
 
-			{% for city_error in user_form.city.errors %}
-				<p class="error">{{ city_error }}</p>
-			{% endfor %}
+            {% for city_error in user_form.city.errors %}
+                <p class="error">{{ city_error }}</p>
+            {% endfor %}
 
-			<label>{{ profile_form.country.label_tag }}</label>
-			<input type="text" name="country" value="{{ user.profile.country }}" >
+            <label>{{ profile_form.country.label_tag }}</label>
+            <input type="text" name="country" value="{{ user.profile.country }}" >
 
-			{% for country_error in user_form.country.errors %}
-				<p class="error">{{ country_error }}</p>
-			{% endfor %}
+            {% for country_error in user_form.country.errors %}
+                <p class="error">{{ country_error }}</p>
+            {% endfor %}
 
-			<label>{{ profile_form.zipp.label_tag }}</label>
-			<input type="text" name="zipp" value="{{ user.profile.zipp }}" >
+            <label>{{ profile_form.zipp.label_tag }}</label>
+            <input type="text" name="zipp" value="{{ user.profile.zipp }}" >
 
-			{% for zipp_error in user_form.zipp.errors %}
-				<p class="error">{{ zipp_error }}</p>
-			{% endfor %}
+            {% for zipp_error in user_form.zipp.errors %}
+                <p class="error">{{ zipp_error }}</p>
+            {% endfor %}
 
-			<label>{{ profile_form.phone.label_tag }}</label>
-			<input type="text" name="phone" value="{{ user.profile.phone }}" >
+            <label>{{ profile_form.phone.label_tag }}</label>
+            <input type="text" name="phone" value="{{ user.profile.phone }}" >
 
-			{% for phone_error in user_form.phone.errors %}
-				<p class="error">{{ phone_error }}</p>
-			{% endfor %}
+            {% for phone_error in user_form.phone.errors %}
+                <p class="error">{{ phone_error }}</p>
+            {% endfor %}
 
-			<button type="submit">update address</button>
-		</form>
-	</div>
-	
+            <button type="submit">update address</button>
+        </form>
+    </div>
+    
 
 {% endblock content %}
