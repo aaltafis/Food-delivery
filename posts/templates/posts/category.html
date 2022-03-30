@@ -3,17 +3,23 @@
 
 {% block content %}
 
-<div class="container">   
+<div class="container">
+    <nav aria-label="breadcrumb" style="margin-top: 6%;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}" class="breadcrumb-item">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: white;">{{ categories.name }}</li>
+        </ol>
+    </nav>   
     <div class="gallery-grid" style="margin-top: 10%;" >
-    	{% for c in category %}
+    	{% for c in categories %}
             <div class="grid-item">
-                <div class="grid-inner">
-                    <img src="{{ c.image.url }}" alt="" class="grid-img" style="width: 430px;">
-                    <div class="grid-title">
+                <div class="category-inner">
+                    <div class="scale"><img src="{{ c.image.url }}" alt="" class="grid-img scale" style="width: 430px;"></div>        
+                    <div class="category-title ">
                         <span>
                             <center>
                                 <a href="{{ c.get_absolute_url }}" class="name">
-    								<h1 >{{ c.name }}</h1>					
+    								<button class="btn-category">{{ c.name }}</button>					
     							</a>
                             </center>
                         </span>     

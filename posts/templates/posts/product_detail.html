@@ -2,13 +2,23 @@
 
 
 {% block content %}
+<div class="container">
+	<nav aria-label="breadcrumb" style="margin-top: 6%;">
+	  	<ol class="breadcrumb">
+	    	<li class="breadcrumb-item"><a href="{% url 'index' %}" class="breadcrumb-item">Home</a></li>
+	    	<li class="breadcrumb-item"><a href="{{ category.get_absolute_url }}" class="breadcrumb-item">{{ category.name }}</a></li>
+	    	<li class="breadcrumb-item active" aria-current="page" style="color: white;">{{ product.title }}</li>
+
+	  	</ol>
+	</nav>
+</div>
 
 	<section class="my-5 pt-5">
 		<div class="row mt-5 gap-5 gx-5">
 			<div class="col-lg-5 col-md-12 col-12">
-				<img src="{{ product.image.url }}" style="height: 600px; margin-left: 250px; " alt="">
+				<img src="{{ product.image.url }}" style="height: 600px; margin-left: 220px; " alt="">
 			</div>
-			<div class=" col-lg-6 col-md-12 col-12 ms-5">
+			<div class="col-lg-6 col-md-12 col-12 ms-5">
 				<h1 class="title-guy">{{ category.name }} << {{ product.title }} >></h1>
 				<h1 class="title-guy">${{ product.price }}</h1>
 				<button >-</button>

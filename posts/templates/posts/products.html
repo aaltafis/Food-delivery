@@ -4,16 +4,22 @@
 {% block content %}
 
 <div class="container">
+    <nav aria-label="breadcrumb" style="margin-top: 6%;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'index' %}" class="breadcrumb-item">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: white;">{{ category.name }}</li>
+        </ol>
+    </nav>
     <h1 class="name">{{ category.name }}</h1>
     <div class="gallery-grid" style="margin-top: 10%;">
     	{% for p in product %}
             <div class="grid-item">
                 <div class="grid-inner">
-                    <img src="{{ p.image.url }}" alt="" class="grid-img" style="width: 500px;">
+                    <img src="{{ p.image.url }}" alt="" class="grid-img" style="width: 400px;">
                     <div class="grid-title">
                         <span>
                             <center>
-                            	<a href="{{ p.get_absolute_url }}" class="name"><h1><< {{ p.title }} >></h1></a>      
+                            	<a href="{{ p.get_absolute_url }}" class="name"><h1>{{ p.title }}</h1></a>      
     							<h2 style="color: white;">${{ p.price }}</h2>	
                                 <button class="btn-name">ADD TO CART</button>
                             </center>
