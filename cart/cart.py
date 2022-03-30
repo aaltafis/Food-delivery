@@ -3,7 +3,7 @@ from django.conf import settings
 from dishes.models import Product
 
 
-class Cart(object):
+class Cart:
 
     def __init__(self, request):
         """ Инициализация корзины """
