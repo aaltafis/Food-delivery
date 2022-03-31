@@ -3,15 +3,13 @@ from .models import Product, Category
 
 
 
-# def index(request):
-# 	categories = Category.objects.all()
-# 	product = Product.objects.all()
-# 	context = {
-# 		'categories': categories,
-# 		'product': product,
-# 	}
+def index(request):
+	categories = Category.objects.all()
+	context = {
+		'categories': categories,
+	}
 
-# 	return render(request, "posts/index.html", context)
+	return render(request, "posts/index.html", context)
 
 
 def category(request):	
@@ -55,30 +53,5 @@ def product_detail(request, category_slug, product_slug):
 
 
 
-
-
-
-
-
-
-
-
-
-
-def index(request):
-	categories = Category.objects.all()
-	burger_category = Category.objects.filter(product__title="THE DADDY")
-	burger_product = Product.objects.filter(category__name="BURGERS")
-	salad_category = Category.objects.filter(product__title="SALAD NY")
-	salad_product = Product.objects.filter(category__name="SALADS")
-	context = {
-		'categories': categories,
-		'burger_category': burger_category,
-		'burger_product': burger_product,
-		'salad_category': salad_category,
-		'salad_product': salad_product,
-	}
-
-	return render(request, "posts/index.html", context)
 
 

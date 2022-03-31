@@ -27,53 +27,29 @@
 		</table>
 	</center>
 </div>
-{% for c in burger_category %}
-    <center style="margin-top: 10%"><h1><a href="{{ c.get_absolute_url }}" class="big-link">{{c.name}}</a></h1></center>
-{% endfor %}
-<div class="owl-carousel ">
-    {% for p in burger_product %}
-        <div class="gallery-grid">
-            <div class="grid-item">
-                <div class="grid-inner">
-                    <img src="{{ p.image.url }}" alt="" class="grid-img">
-                    <div class="grid-title">
-                        <span>
-                            <center>
-                                <a href="{{ p.get_absolute_url }}"class="name"><< {{ p.title }} >></a>
-                                <h1 style="color: white;">${{ p.price }}</h1>
-                                <button class="btn-name">ADD TO CART</button>
-                            </center>
-                        </span>     
+{% for c in categories %}
+    <center style="margin-top: 4%"><h1><a href="{{ c.get_absolute_url }}" class="big-link">{{c.name}}</a></h1></center>
+    <div class="owl-carousel owl-theme">
+        {% for product in c.product_set.all %}
+            <div class="gallery-grid">
+                <div class="grid-item">
+                    <div class="grid-inner">
+                        <img src="{{ product.image.url }}" alt="" class="grid-img">
+                        <div class="grid-title">
+                            <span>
+                                <center>
+                                    <a href="{{ product.get_absolute_url }}"class="name"><< {{ product.title }} >></a>
+                                    <h1 style="color: white;">${{ product.price }}</h1>
+                                    <button class="btn-name">ADD TO CART</button>
+                                </center>
+                            </span>     
+                        </div>
                     </div>
-                </div>
-            </div>    
-        </div>
-    {% endfor %}  
-</div>
-{% for c in salad_category %}
-    <center style="margin-top: 10%"><h1><a href="{{ c.get_absolute_url }}" class="big-link">{{c.name}}</a></h1></center>
+                </div>    
+            </div>
+        {% endfor %}  
+    </div>
 {% endfor %}
-<div class="owl-carousel ">
-    {% for p in salad_product %}
-        <div class="gallery-grid">
-            <div class="grid-item">
-                <div class="grid-inner">
-                    <img src="{{ p.image.url }}" alt="" class="grid-img">
-                    <div class="grid-title">
-                        <span>
-                            <center>
-                                <a href="{{ p.get_absolute_url }}"class="name"><< {{ p.title }} >></a>
-                                <h1 style="color: white;">${{ p.price }}</h1>
-                                <button class="btn-name">ADD TO CART</button>
-                            </center>
-                        </span>     
-                    </div>
-                </div>
-            </div>    
-        </div>
-    {% endfor %}  
-</div>
-
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -84,7 +60,7 @@
             loop:true,
             margin:10,
             nav:true,
-            autoplay: false,
+            autoplay: true,
             dots:false,
             responsiveClass:true,
             responsive:{
