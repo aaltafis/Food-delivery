@@ -1,0 +1,358 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #0c0c0c; /* Под цвет сайта */
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .register-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh; /* центр по вертикали */
+    }
+
+    .register-box {
+        background-color: #111;
+        padding: 40px 50px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(255, 255, 0, 0.2);
+        width: 400px;
+        text-align: center;
+    }
+
+    .register-box h2 {
+        color: #FFD100;
+        margin-bottom: 25px;
+    }
+
+    .register-box input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 8px;
+        background-color: #222;
+        color: white;
+    }
+
+    .register-box button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        background-color: #FFD100;
+        border: none;
+        color: black;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .register-box button:hover {
+        background-color: #ffcc00c4;
+    }
+</style>
+
+<div class="register-container">
+    <div class="register-box">
+        <h2>Регистрация</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Создать аккаунт</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Простой шаблон: Регистрация / Вход</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#4f46e5; --muted:#94a3b8; --success:#10b981; --danger:#ef4444;
+      --radius:12px; --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background: linear-gradient(180deg,#071023 0%, #071a2b 100%); color:#e6eef8;
+      min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .wrap{width:980px; max-width:100%; display:grid; grid-template-columns:1fr 420px; gap:24px; align-items:center}
+    .promo{
+      padding:28px; background:linear-gradient(180deg, rgba(79,70,229,0.06), transparent); border-radius:16px; border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+    .promo h1{margin:0 0 8px; font-size:26px}
+    .promo p{color:var(--muted); margin:0 0 18px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius); padding:22px; border:1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 8px 40px rgba(2,6,23,0.6);
+    }
+    .tabs{display:flex; gap:8px; margin-bottom:14px}
+    .tab{flex:1; padding:10px 12px; text-align:center; cursor:pointer; border-radius:10px; font-weight:600}
+    .tab.active{background:linear-gradient(90deg,var(--accent), #06b6d4); color:white; box-shadow:0 6px 20px rgba(79,70,229,0.18)}
+    form{display:flex; flex-direction:column; gap:12px}
+    label{font-size:13px; color:var(--muted)}
+    input[type=text], input[type=email], input[type=password] {
+      width:100%; padding:12px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.03); background:var(--glass); color:inherit; outline:none;
+    }
+    .row{display:flex; gap:8px}
+    .btn{
+      padding:11px 14px; border-radius:10px; border:0; cursor:pointer; font-weight:700; background:var(--accent); color:white;
+    }
+    .secondary{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+    .muted{color:var(--muted); font-size:13px}
+    .small{font-size:13px}
+    .error{color:var(--danger); font-size:13px}
+    .success{color:var(--success); font-size:13px}
+    .pwd-row{display:flex; gap:8px; align-items:center}
+    .link{color:var(--accent); cursor:pointer; text-decoration:underline}
+    .meter{height:8px; border-radius:8px; background:rgba(255,255,255,0.04); overflow:hidden}
+    .meter > i{display:block; height:100%; width:0%; background:linear-gradient(90deg,#ef4444,#f59e0b,#10b981);}
+    .logo{height:56px; width:56px; border-radius:12px; background:linear-gradient(45deg,#4f46e5,#06b6d4); display:flex; align-items:center; justify-content:center; font-weight:800}
+    .note{font-size:13px; color:var(--muted)}
+    @media(max-width:860px){.wrap{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="tabs">
+        <div class="tab active" id="tab-login">Вход</div>
+        <div class="tab" id="tab-register">Регистрация</div>
+      </div>
+
+      <!-- Login form -->
+<!--       <form id="form-login">
+        <label>Email</label>
+        <input type="email" id="login-email" placeholder="you@example.com" required />
+
+        <label>Пароль</label>
+        <div class="pwd-row">
+          <input type="password" id="login-password" placeholder="Введите пароль" required />
+          <button type="button" class="secondary" id="login-toggle">👁</button>
+        </div>
+
+        <div class="row">
+          <button class="btn" type="submit">Войти</button>
+          <button type="button" class="secondary" id="to-register">Регистрация</button>
+        </div>
+
+        <div id="login-msg" class="muted"></div>
+      </form>
+
+     
+      <form id="form-register" style="display:none">
+        <label>Имя</label>
+        <input type="text" id="reg-name" placeholder="Ваше имя" required />
+
+        <label>Email</label>
+        <input type="email" id="reg-email" placeholder="you@example.com" required />
+
+        <label>Пароль</label>
+        <div class="pwd-row">
+          <input type="password" id="reg-password" placeholder="Придумайте пароль" required />
+          <button type="button" class="secondary" id="reg-toggle">👁</button>
+        </div>
+
+        <label class="small">Надёжность пароля</label>
+        <div class="meter" aria-hidden><i id="pwd-strength"></i></div>
+        <div class="row">
+          <button class="btn" type="submit">Создать аккаунт</button>
+          <button type="button" class="secondary" id="to-login">Уже есть</button>
+        </div>
+
+        <div id="reg-msg" class="muted"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const tabLogin = document.getElementById('tab-login');
+    const tabRegister = document.getElementById('tab-register');
+    const formLogin = document.getElementById('form-login');
+    const formRegister = document.getElementById('form-register');
+
+    function showLogin(){
+      tabLogin.classList.add('active'); tabRegister.classList.remove('active');
+      formLogin.style.display='block'; formRegister.style.display='none';
+    }
+    function showRegister(){
+      tabLogin.classList.remove('active'); tabRegister.classList.add('active');
+      formLogin.style.display='none'; formRegister.style.display='block';
+    }
+    tabLogin.onclick = showLogin; tabRegister.onclick = showRegister;
+    document.getElementById('to-register').onclick = showRegister;
+    document.getElementById('to-login').onclick = showLogin;
+
+    function toggle(idInput){
+      const inp = document.getElementById(idInput);
+      inp.type = inp.type === 'password' ? 'text' : 'password';
+    }
+    document.getElementById('login-toggle').onclick = ()=> toggle('login-password');
+    document.getElementById('reg-toggle').onclick = ()=> toggle('reg-password');
+
+    const pwdStrength = document.getElementById('pwd-strength');
+    const regPassword = document.getElementById('reg-password');
+
+    function strengthScore(pw){
+      let score=0;
+      if(!pw) return 0;
+      if(pw.length>=8) score+=1; if(pw.length>=12) score+=1;
+      if(/[a-z]/.test(pw) && /[A-Z]/.test(pw)) score+=1;
+      if(/[0-9]/.test(pw)) score+=1;
+      if(/[^A-Za-z0-9]/.test(pw)) score+=1;
+      return score; // 0..5
+    }
+    regPassword.addEventListener('input', ()=>{
+      const s = strengthScore(regPassword.value);
+      const pct = (s/5)*100;
+      pwdStrength.style.width = pct + '%';
+    });
+
+
+
+    async function sha256Hex(message){
+      const enc = new TextEncoder();
+      const data = enc.encode(message);
+      const hash = await crypto.subtle.digest('SHA-256', data);
+      // convert to hex
+      const arr = Array.from(new Uint8Array(hash));
+      return arr.map(b=>b.toString(16).padStart(2,'0')).join('');
+    }
+
+    function getUsers(){
+      try{ return JSON.parse(localStorage.getItem('users') || '{}'); }catch(e){return{}};
+    }
+    function setUsers(u){ localStorage.setItem('users', JSON.stringify(u)); }
+
+    // Регистрация
+    document.getElementById('form-register').addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('reg-name').value.trim();
+      const email = document.getElementById('reg-email').value.trim().toLowerCase();
+      const pwd = document.getElementById('reg-password').value;
+      const msg = document.getElementById('reg-msg');
+      msg.className = 'muted';
+
+      if(!name || !email || !pwd){ msg.textContent='Заполните все поля.'; return; }
+      if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ msg.textContent='Неверный формат email.'; return; }
+      if(pwd.length<6){ msg.textContent='Пароль должен быть минимум 6 символов.'; return; }
+
+      const users = getUsers();
+      if(users[email]){ msg.textContent='Пользователь с таким email уже существует.'; return; }
+
+      const hash = await sha256Hex(pwd + '::pepper'); // добавили "pepper" для простоты
+      users[email] = { name, hash, created: new Date().toISOString() };
+      setUsers(users);
+
+      msg.className='success';
+      msg.textContent = 'Аккаунт создан. Можете войти.';
+      // clear password field
+      document.getElementById('reg-password').value='';
+      pwdStrength.style.width='0%';
+      setTimeout(showLogin, 800);
+    });
+
+    document.getElementById('form-login').addEventListener('submit', async(e)=>{
+      e.preventDefault();
+      const email = document.getElementById('login-email').value.trim().toLowerCase();
+      const pwd = document.getElementById('login-password').value;
+      const msg = document.getElementById('login-msg'); msg.className='muted';
+
+      const users = getUsers();
+      if(!users[email]){ msg.className='error'; msg.textContent='Пользователь не найден.'; return; }
+
+      const hash = await sha256Hex(pwd + '::pepper');
+      if(hash === users[email].hash){
+        msg.className='success';
+        msg.textContent = `Привет, ${users[email].name}! Вы успешно вошли.`;
+        // Пример: сохраняем флаг сессии (только для демонстрации)
+        sessionStorage.setItem('auth', JSON.stringify({email, name: users[email].name, at: new Date().toISOString()}));
+      } else {
+        msg.className='error';
+        msg.textContent='Неверный пароль.';
+      }
+    });
+
+    (async function(){
+      const users = getUsers();
+      const demoEmail = 'demo@example.com';
+      if(!users[demoEmail]){
+        const h = await sha256Hex('Password123!' + '::pepper');
+        users[demoEmail] = { name: 'Демо Пользователь', hash: h, created: new Date().toISOString() };
+        setUsers(users);
+      }
+    })();
+
+  </script>
+</body>
+</html> 
+

@@ -27,6 +27,11 @@ urlpatterns = [
     path('collections/<str:slug>/', views.products, name = "products"),
     path('collections/<slug:category_slug>/<slug:product_slug>/', views.product_detail, name = "product_detail"),
 
+
+    # Регистрация страница новая
+    path('posts/registr.html', views.registr_view, name="registr"),
+
+
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 

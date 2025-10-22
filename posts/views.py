@@ -52,6 +52,11 @@ def product_detail(request, category_slug, product_slug):
 
 
 
+# регистрация 
 
-
-
+def registr_view(request):
+	categories = Category.objects.all()  # чтобы в шаблоне тоже были категории
+	context = {
+		'categories': categories,
+	}
+	return render(request, "posts/registr.html", context)
