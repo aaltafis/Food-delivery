@@ -1,0 +1,88 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #0c0c0c;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .auth-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .auth-box {
+        background-color: #111;
+        padding: 40px 50px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(255, 255, 0, 0.2);
+        width: 400px;
+        text-align: center;
+    }
+
+    .auth-box h2 {
+        color: #FFD100;
+        margin-bottom: 25px;
+    }
+
+    .auth-box input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 8px;
+        background-color: #222;
+        color: white;
+    }
+
+    .auth-box button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        background-color: #FFD100;
+        border: none;
+        color: black;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .auth-box button:hover {
+        background-color: #ffcc00c4;
+    }
+
+    .auth-box a {
+        color: #FFD100;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+
+    .auth-box a:hover {
+        color: white;
+    }
+</style>
+
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>Вход</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Имя пользователя" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+        </form>
+        <a href="{% url 'registr' %}">Нет аккаунта? Зарегистрируйтесь</a>
+    </div>
+</div>
+{% endblock %}
+
+
+

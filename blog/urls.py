@@ -29,7 +29,8 @@ urlpatterns = [
 
 
     # Регистрация страница новая
-    path('posts/registr.html', views.registr_view, name="registr"),
+    path('registr.html', views.registr_view, name="registr"),
+    path('login/', views.login_view, name='login'),
 
 
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

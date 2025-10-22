@@ -60,3 +60,8 @@ def registr_view(request):
 		'categories': categories,
 	}
 	return render(request, "posts/registr.html", context)
+
+
+
+def login_view(request):
+    return render(request, 'posts/login.html')
